@@ -3,20 +3,20 @@
   font-family: arial, sans-serif;
 }
 body {
-  padding: 0;
-  margin: 0;
-  background-size: cover;
-}
-body {
+  background: no-repeat center center fixed;
   background-size: cover;
 }
 body .title {
   width: 512px;
   margin: 0 auto;
+  max-width: 100%;
 }
 body .buttons {
   width: 316px;
   margin: 0 auto;
+}
+body .buttons a {
+  text-decoration: none;
 }
 body .buttons a .button {
   width: 316px;
@@ -35,7 +35,8 @@ body .buttons a .button:hover {
   color: white;
 }
 body .buttons a .button:hover img.icon {
-  filter: brightness(150%);
+  -webkit-filter: brightness(150%);
+          filter: brightness(150%);
 }
 body .buttons a .button img.icon {
   position: absolute;

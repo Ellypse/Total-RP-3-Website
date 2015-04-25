@@ -5,50 +5,58 @@ var gulp = require('gulp'),
 	less = require('gulp-less'),
 	path = require('path'),
 	spawn = require('child_process').spawn,
-	autoprefixer = require('gulp-autoprefixer'),
+	postcss = require('gulp-postcss'),
+	autoprefixer = require('autoprefixer-core'),
 	node;
+
+
 
 /**
  * $ gulp server
- * description: launch the server. If there's a server already running, kill it.
+ * Description: Launch node server. If there's a server already running, kill it.
  */
 gulp.task('server', function () {
-	if (node) node.kill()
-	node = spawn('node', ['./bin/www'], {stdio: 'inherit'})
+	if (node) node.kill();
+	node = spawn('node', ['./server.js'], {stdio: 'inherit'});
 	node.on('close', function (code) {
 		if (code === 8) {
 			gulp.log('Error detected, waiting for changes...');
 		}
 	});
-})
+});
 
 /**
  * $ gulp
- * description: start the development environment
+ * Description: Launch node server.
+ * Watch for changes in JavaScript files to reload server.
+ * Watch for changes in the .less files to compile them to css
  */
 gulp.task('default', function () {
-	gulp.run('server')
+	gulp.run('server');
 
-	gulp.watch(['*', './views/**/*.jade', './routes/**/*.js', './less/*.less'], function () {
+	gulp.watch(['./*.js','./routes/**/*.js'], function () {
 		gulp.run('server');
 	});
 
-
 	gulp.watch('./less/*.less', function () {
 		console.log("Compiling less.");
-		gulp.run('less');
+		gulp.run('css');
 	});
-})
+});
 
-gulp.task('less', function () {
+/**
+ * $ gulp css
+ * Description : Compile .less stylesheets into CSS stylesheets and prefix what's necessary.
+ */
+gulp.task('css', function () {
+	var processors = [
+		autoprefixer({browsers: ['last 3 version']})
+	];
 	gulp.src('./less/**/*.less')
 		.pipe(less({
 			paths: [path.join(__dirname, 'less', 'includes')]
 		}))
-		.pipe(autoprefixer({
-			browsers: ['ie 8'],
-			cascade: false
-		}))
+		.pipe(postcss(processors))
 		.pipe(gulp.dest('./public/stylesheets'));
 });
 
