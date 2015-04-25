@@ -1,0 +1,78 @@
+@import url(http://fonts.googleapis.com/css?family=Lora);
+
+@wow-link-color: #ffd51b;
+
+* {
+	font-family: arial, sans-serif;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background-size: cover;
+}
+
+body {
+	background-size: cover;
+
+	.title {
+		width: 512px;
+		margin: 0 auto;
+	}
+
+	.buttons {
+		width: 316px;
+		margin: 0 auto;
+
+		a {
+
+			.button {
+
+				width: 316px;
+				height: 96px;
+				padding-top: 34px;
+				position: relative;
+				box-sizing: border-box;
+
+				background: url("../images/achievement_button.png") no-repeat;
+
+				font: bold 13px/1.5 'Lora', serif;
+				text-decoration: none;
+				text-align: center;
+				color: @wow-link-color;
+				cursor: pointer;
+
+				&:hover {
+					color: white;
+					img.icon {
+						filter: brightness(150%);
+					}
+				}
+
+				img.icon {
+					position: absolute;
+					left: 16px;
+					top: 23px;
+					width: 40px;
+					height: 40px;
+					border-radius: 4px;
+					border: 2px solid #666;
+					border-top: 2px solid #CCC;
+					border-bottom: 2px solid #444;
+				}
+
+				&.forum{
+					margin-bottom: 50px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
