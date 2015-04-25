@@ -9,6 +9,11 @@ var path = require("path"),
 	validator = require('validator'),
 config = require("../config");
 
+renato:slugToTitle = function(slug) {
+	slug = slug.replace('.md', '').trim();
+	return path.basename(slug);
+};
+
 /* GET home page. */
 router.get('/*', function(req, res, next) {
 	if(!req.params[0]){
@@ -49,7 +54,6 @@ router.get('/*', function(req, res, next) {
 						return next(err);
 					}
 
-					console.log(content);
 					// Process Markdown files
 					if (path.extname(filePath) == '.md') {
 						// File info
