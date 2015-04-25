@@ -9,7 +9,7 @@ var path = require("path"),
 	validator = require('validator'),
 config = require("../config");
 
-renato:slugToTitle = function(slug) {
+raneto.slugToTitle = function(slug) {
 	slug = slug.replace('.md', '').trim();
 	return path.basename(slug);
 };
