@@ -19,7 +19,7 @@
     "marked": "^0.3.2",
     "moment": "^2.6.0",
     "morgan": "~1.0.0",
-    "static-favicon": "~1.0.0",
+    "serve-favicon": "^2.2.0",
     "underscore": "^1.6.0",
     "underscore.string": "^2.3.3",
     "validator": "^3.13.0"
