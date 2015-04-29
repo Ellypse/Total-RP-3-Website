@@ -6,3 +6,4 @@ content
 
 public/images/backgrounds
 content/**/*
+npm-debug.log
