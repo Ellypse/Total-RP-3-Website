@@ -5,7 +5,7 @@ var express = require('express'),
 	bodyParser = require('body-parser'),
 	fs = require('fs'),
 	extend = require('extend'),
-	raneto = require('raneto-core'),
+	raneto = require('./raneto-custom'),
 	favicon = require('serve-favicon');
 
 var config = require('./config'),

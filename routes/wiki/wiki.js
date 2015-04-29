@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var raneto = require("raneto-core");
+var raneto = require('../../raneto-custom');
 var path = require("path"),
 	fs = require('fs'),
 	_s = require('underscore.string'),
@@ -9,11 +9,6 @@ var path = require("path"),
 	validator = require('validator'),
 config = require("../../config");
 var debug = require("debug")("wiki");
-
-raneto.slugToTitle = function(slug) {
-	slug = slug.replace('.md', '').trim();
-	return path.basename(slug);
-};
 
 /* GET home page. */
 router.get('/*', function(req, res, next) {
