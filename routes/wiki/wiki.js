@@ -8,6 +8,7 @@ var path = require("path"),
 	marked = require('marked'),
 	validator = require('validator'),
 config = require("../../config");
+var debug = require("debug")("wiki");
 
 raneto.slugToTitle = function(slug) {
 	slug = slug.replace('.md', '').trim();
@@ -24,7 +25,7 @@ router.get('/*', function(req, res, next) {
 				searchResults = raneto.doSearch(searchQuery),
 				pageListSearch = raneto.getPages('');
 
-			return res.render('search', {
+			return res.render('wiki_search.jade', {
 				config: config,
 				pages: pageListSearch,
 				search: searchQuery,
@@ -41,7 +42,7 @@ router.get('/*', function(req, res, next) {
 			if (!fs.existsSync(filePath)) filePath += '.md';
 
 			if (slug == '/index' && !fs.existsSync(filePath)) {
-				return res.render('home', {
+				return res.render('wiki_home.jade', {
 					config: config,
 					pages: pageList,
 					body_class: 'page-home'
@@ -66,7 +67,7 @@ router.get('/*', function(req, res, next) {
 						content = raneto.processVars(content);
 						var html = marked(content);
 
-						return res.render('page', {
+						return res.render('wiki_page.jade', {
 							config: config,
 							pages: pageList,
 							meta: meta,

@@ -1,0 +1,12 @@
+extends wiki_layout
+
+block content
+    .col-sm-3
+        include wiki_sidebar
+    .col-sm-9
+        section.content
+            if meta.title
+                h1.title= meta.title
+            !{content}
+            .page-meta.clearfix
+                .last-updated.pull-right= "Last updated on " + last_modified

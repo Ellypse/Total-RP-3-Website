@@ -5,7 +5,7 @@ var fs = require('fs');
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	var backgrounds = fs.readdirSync("./public/images/backgrounds");
-	res.render('index',{backgrounds:backgrounds});
+	res.render('index.jade',{backgrounds:backgrounds});
 
 });
 

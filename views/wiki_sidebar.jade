@@ -1,0 +1,13 @@
+ul.menu
+   each page in pages
+      if page.is_index
+         each file in page.files
+            li.page
+               a(href="/wiki/#{file.slug}")= file.title
+      else
+         li.category
+            h5.category-title= page.title
+            ul.pages
+               each file in page.files
+                  li.page
+                     a(href="/wiki/#{file.slug}")= file.title

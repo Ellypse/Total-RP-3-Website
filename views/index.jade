@@ -1,0 +1,34 @@
+doctype html
+html
+    head
+        meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0')
+        title Total RP 3
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        script(src='javascripts/libs/zepto.min.js')
+        script(src='javascripts/index.js')
+    body
+        .title
+            img.title(src='images/logo.png')
+        .buttons
+            a(href='http://curse.totalrp3.info', target='blank')
+                .button= "Download on Curse"
+                    img.icon(src='images/icons/crate.jpg')
+            a(href='/wiki')
+                .button= "Knowledge base"
+                    img.icon(src='images/icons/book.jpg')
+            a(href='http://forums.telkostrasz.be', target='blank')
+                .button= "Forum"
+                    img.icon(src='images/icons/people.jpg')
+            a(href='http://loc.totalrp3.info', target='blank')
+                .button= "Help localizing TRP 3"
+                    img.icon(src='images/icons/friends.jpg')
+        .buttons
+            a(href='http://twitter.com/EllypseCelwe', target='blank')
+                .button= "Follow @Ellypse"
+                    img.icon(src='images/icons/ellypse.jpg')
+            a(href='http://twitter.com/Telkostrasz', target='blank')
+                .button= "Follow @Telkostrasz"
+                    img.icon(src='images/icons/telko.jpg')
+        script.
+            backgrounds_images = !{JSON.stringify(backgrounds)}
+                                                
