@@ -7,7 +7,7 @@ var path = require("path"),
 	moment = require('moment'),
 	marked = require('marked'),
 	validator = require('validator'),
-config = require("../config");
+config = require("../../config");
 
 raneto.slugToTitle = function(slug) {
 	slug = slug.replace('.md', '').trim();

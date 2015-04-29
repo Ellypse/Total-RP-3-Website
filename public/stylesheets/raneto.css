@@ -102,14 +102,14 @@
     box-sizing: border-box;
 }
 .content code {
-    background-color: #FFFDDC;
-    color: #555;
+    background-color: #4a6778;
+    color: white;
 }
 .content pre {
-    background: #FFFDDC;
+    background: #4a6778;
     border: 0;
 }
-.content pre code { color: #657B83; }
+.content pre code { color: white; }
 .content .hljs { background: none; }
 .content .page-meta {
     font-size: 85%;

@@ -9,8 +9,8 @@ var bodyParser = require('body-parser'),
     config = require('./config');
 
 var routes = require('./routes/index');
-var wiki = require('./routes/wiki');
-
+var wiki = require('./routes/wiki/wiki');
+var favicon = require('serve-favicon');
 var app = express();
 
 // view engine setup
@@ -18,8 +18,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('hogan-express'));
 app.set('view engine', 'html');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());

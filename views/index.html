@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="less/style.less"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-        <title></title>
+        <title>Total RP 3</title>
         <link rel="stylesheet" href="/stylesheets/style.css">
-        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="javascripts/libs/zepto.min.js"></script>
         <script src="javascripts/index.js"></script>
     </head>
     <body>
@@ -13,35 +14,47 @@
         </div>
         <div class="buttons">
             <a href="http://curse.totalrp3.info" target="blank">
-                <div class="button curse">
+                <div class="button">
                     Download on Curse
                     <img src="images/icons/crate.jpg" class="icon"/>
                 </div>
             </a>
+            <a href="http://totalrp3.info/wiki">
+                <div class="button">
+                    Knowledge base
+                    <img src="images/icons/book.jpg" class="icon"/>
+                </div>
+            </a>
+            <a href="http://forums.telkostrasz.be" target="blank">
+                <div class="button">
+                    Forum
+                    <img src="images/icons/people.jpg" class="icon"/>
+                </div>
+            </a>
             <a href="http://loc.totalrp3.info" target="blank">
-                <div class="button localization">
+                <div class="button">
                     Help localizing TRP 3
                     <img src="images/icons/friends.jpg" class="icon"/>
                 </div>
             </a>
-            <a href="http://forums.telkostrasz.be" target="blank">
-                <div class="button forum">
-                    Forum
-                    <img src="images/icons/book.jpg" class="icon"/>
-                </div>
-            </a>
+        </div>
+
+        <div class="buttons">
             <a href="http://twitter.com/EllypseCelwe" target="blank">
-                <div class="button twitter">
+                <div class="button">
                     Follow @Ellypse
                     <img src="images/icons/ellypse.jpg" class="icon"/>
                 </div>
             </a>
             <a href="http://twitter.com/Telkostrasz" target="blank">
-                <div class="button twitter">
+                <div class="button">
                     Follow @Telkostrasz
                     <img src="images/icons/telko.jpg" class="icon"/>
                 </div>
             </a>
         </div>
+    <script>
+        backgrounds_images = [{{#backgrounds}}'{{.}}', {{/backgrounds}}]
+    </script>
     </body>
 </html>

@@ -13,7 +13,7 @@ body .title {
 }
 body .buttons {
   width: 316px;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
 }
 body .buttons a {
   text-decoration: none;
@@ -24,7 +24,7 @@ body .buttons a .button {
   padding-top: 34px;
   position: relative;
   box-sizing: border-box;
-  background: url("../images/achievement_button.png") no-repeat;
+  background: url("/images/achievement_button.png") no-repeat;
   font: bold 13px/1.5 'Lora', serif;
   text-decoration: none;
   text-align: center;
@@ -48,7 +48,4 @@ body .buttons a .button img.icon {
   border: 2px solid #666;
   border-top: 2px solid #CCC;
   border-bottom: 2px solid #444;
-}
-body .buttons a .button.forum {
-  margin-bottom: 50px;
 }
