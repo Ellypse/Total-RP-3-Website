@@ -1,0 +1,26 @@
+extends localizationLayout
+
+block localizationContent
+    .container(ng-controller="localizationDetailsCtrl")
+        h1= "Locale : {{locale.id}}"
+        div.input-group.panel
+            input.form-control(type="text", placeholder="Search for a key or a value…", ng-model="query")
+            span.input-group-btn
+                button.btn.btn-default(type="button", ng-click="clearSearch()", ng-if="query && query != ''")= "x"
+                button.btn.btn-default(type="button", ng-click="clearSearch()", ng-if="!query || query == ''")= "Search"
+        div(dir-paginate="value in locale.locales | filter:query | itemsPerPage: 5")
+            form.form-horizontal(name="{{value.key}}", ng-submit="submit(locale.id, value)")
+                .form-group
+                    .col-sm-4.control-label
+                        label(for="{{value.key}}")= "{{value.key}}"
+                        p= "{{value.valueEN}}"
+                    .col-sm-6
+                        textarea.form-control(name="{{value.key}}", rows="5")= "{{value.value}}"
+                    .col-sm-2
+                        button.btn.btn-primary(type="submit")= "Save"
+        dir-pagination-controls
+
+
+block lastscripts
+    script.
+        localeData = !{JSON.stringify(locale)}
