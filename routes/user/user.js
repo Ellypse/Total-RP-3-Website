@@ -4,7 +4,8 @@
 var express = require('express'),
 	router = express.Router(),
 	fs = require('fs'),
-	bcrypt = require('bcrypt');
+	bcrypt = require('bcrypt'),
+	passport = require('passport');
 
 /**
  * Controllers
@@ -29,9 +30,16 @@ router.post('/register', function(req, res, next){
 	newUser.save();
 });
 
-router.get('/login', function(req, res, next){
-	res.render("user/login");
-});
+router.get('/auth/bnet',
+	passport.authenticate('bnet'));
+
+router.get('/auth/bnet/callback',
+	passport.authenticate('bnet', { failureRedirect: '/' }),
+	function(req, res){
+		console.log(req.params);
+		console.log(req.headers);
+		res.redirect('/wiki');
+	});
 
 router.post('/login', function(req, res, next){
 	console.log(req.body);

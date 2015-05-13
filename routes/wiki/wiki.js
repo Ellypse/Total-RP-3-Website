@@ -12,6 +12,10 @@ var debug = require("debug")("wiki");
 
 /* GET home page. */
 router.get('/*', function (req, res, next) {
+	var battleTag = null;
+	if(req.user){
+		battleTag = req.user.battletag;
+	}
 	if (!req.params[0]) {
 		req.params[0] = "/";
 	}
@@ -25,7 +29,8 @@ router.get('/*', function (req, res, next) {
 			pages: pageListSearch,
 			search: searchQuery,
 			searchResults: searchResults,
-			body_class: 'page-search'
+			body_class: 'page-search',
+			battleTag: battleTag
 		});
 	}
 	else if (req.params[0]) {
@@ -40,7 +45,8 @@ router.get('/*', function (req, res, next) {
 			return res.render('wiki/home.jade', {
 				config: config.wiki,
 				pages: pageList,
-				body_class: 'page-home'
+				body_class: 'page-home',
+				battleTag: battleTag
 			});
 		} else {
 
@@ -71,7 +77,8 @@ router.get('/*', function (req, res, next) {
 						content: html,
 						markdownContent : markdownContent,
 						body_class: 'page-' + raneto.cleanString(slug),
-						last_modified: moment(stat.mtime).format('Do MMM YYYY')
+						last_modified: moment(stat.mtime).format('Do MMM YYYY'),
+						battleTag: battleTag
 					});
 				} else {
 					// Serve static file

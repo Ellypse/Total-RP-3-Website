@@ -23,8 +23,14 @@ html
         header.header
             .container-fluid
                 .row
-                    .col-sm-6
+                    .col-sm-3
                         a.logo(href="/wiki")= config.site_title
+                    .col-sm-3
+                        if battleTag
+                            h5= "Welcome " + battleTag
+                        else
+                            h5
+                                a(href="/user/auth/bnet") Login
                     .col-sm-6
                         form.search-form.form-inline.pull-right(role="form" action="/wiki/")
                             .form-group
