@@ -20,7 +20,7 @@ var ssl_options = {
  */
 var port = normalizePort(process.env.PORT || '8080');
 app.set('port', port);
-var securedPort = normalizePort(process.env.PORT || '8443');
+var securedPort = normalizePort('8443');
 app.set('httpsPort', securedPort);
 
 var server = http.createServer(app);
