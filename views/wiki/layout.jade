@@ -7,18 +7,24 @@ html
         if meta
             meta(name="description" content=meta.description)
             title= meta.title + '-' + config.site_title
+            meta(name="twitter:card", content="summary")
+            meta(name="twitter:site", content="@totalrp3")
+            meta(name="twitter:title", content="Total RP 3 Documentation - "+meta.title)
+            meta(name="twitter:description", content=meta.description)
+            meta(property="og:title", content=meta.title)
+            meta(property="og:description", content=meta.description)
         else
             title= config.site_title
-        link(rel='icon' href="/favicon.ico")
+        meta(property="og:site_name", content=config.site_title)
+        meta(property="article:author", content="https://www.facebook.com/pages/Total-RP-3/170199479668355")
+        meta(property="article:publisher", content="https://www.facebook.com/pages/Total-RP-3/170199479668355")
+        link(rel='icon', href="/favicon.ico")
         link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
         link(rel='stylesheet', href='/bower_components/highlightjs/styles/monokai.css')
         link(rel='stylesheet', href='/stylesheets/raneto.css')
         link(rel='stylesheet', href='/stylesheets/wiki_custom.css')
         if meta
-            meta(name="twitter:card", content="summary")
-            meta(name="twitter:site", content="@totalrp3")
-            meta(name="twitter:title", content="Total RP 3 Documentation - "+meta.title)
-            meta(name="twiter:description", content=meta.description)
+
         script(src='/bower_components/jquery/dist/jquery.min.js')
         script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
         script(src='/bower_components/highlightjs/highlight.pack.js')

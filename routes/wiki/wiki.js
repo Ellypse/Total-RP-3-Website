@@ -69,7 +69,7 @@ router.get('/*', function (req, res, next) {
 					// Content
 					content = raneto.processVars(markdownContent);
 					var html = marked(content);
-					meta.description = html;
+					meta.description = html.replace(/<(?:.|\n)*?>/gm, '').substring(0, 250) + "…";
 
 					return res.render('./wiki/page.jade', {
 						config: config.wiki,
