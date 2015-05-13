@@ -1,6 +1,6 @@
 var user = angular.module('user', []);
 
-user.controller('registerCtrl', function ($scope, $http) {
+user.controller('registerCtrl', function ($scope, $http, $location) {
 
 	$scope.user = {};
 
@@ -19,7 +19,14 @@ user.controller('registerCtrl', function ($scope, $http) {
 		}
 		$scope.error="";
 
-		$http.post("/user/register", $scope.user);
+		$http.post("/user/register", $scope.user)
+			.success(function(data){
+				console.log("Go!");
+				$location.url("/user/login");
+			})
+			.error(function(err){
+				console.warn(err);
+			});
 	}
 })
 	.controller('loginCtrl', function ($scope, $http) {

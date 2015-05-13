@@ -20,7 +20,6 @@
     "angular-utils-pagination": "~0.7.0",
     "highlightjs": "~8.5.0",
     "fitvids": "~1.1.0",
-    "masonry": "~3.3.0",
-    "semantic-ui": "~1.12.2"
+    "masonry": "~3.3.0"
   }
 }

@@ -27,6 +27,7 @@ router.post('/register', function(req, res, next){
 		email : req.body.email
 	});
 	newUser.save();
+	res.status(200).json({status:"ok"});
 });
 
 router.get('/login', function(req, res, next){

@@ -10,6 +10,8 @@ var express = require('express'),
 	lessMiddleware = require('less-middleware'),
 	autoprefixer = require('autoprefixer-core');
 
+var forceSSL = require('express-force-ssl');
+
 var config = require('./config'),
 	error_handlers = require('./error_handlers'),
 	routes = require('./routes');
@@ -26,7 +28,9 @@ app.use(favicon(path.join(__dirname, 'public/favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
+app.use(forceSSL);
 app.use(cookieParser());
+
 app.use(lessMiddleware(path.join(__dirname, 'less'), {
 	dest: path.join(__dirname, 'public'),
 	preprocess: {
