@@ -26,7 +26,7 @@ var server = http.createServer(app);
 var secureServer = https.createServer(ssl_options, app);
 
 secureServer.listen(443);
-server.listen(80);
+server.listen(8080);
 /**
  * Listen on provided port, on all network interfaces.
  */
