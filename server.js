@@ -18,15 +18,16 @@ var ssl_options = {
 /**
  * Get port from environment and store in Express.
  */
-var port = 80;
-
+var port = normalizePort(process.env.PORT || '8080');
 app.set('port', port);
+var securedPort = normalizePort(process.env.PORT || '8443');
+app.set('httpsPort', securedPort);
 
 var server = http.createServer(app);
 var secureServer = https.createServer(ssl_options, app);
 
-secureServer.listen(443);
-server.listen(8080);
+secureServer.listen(securedPort);
+server.listen(port);
 /**
  * Listen on provided port, on all network interfaces.
  */
