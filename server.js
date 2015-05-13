@@ -6,35 +6,28 @@
 
 var app = require('./app');
 var debug = require('debug')('server');
-var https = require('https');
 var http = require('http');
-var fs = require('fs');
-
-var ssl_options = {
-	key: fs.readFileSync('ssl/key.key'),
-	cert: fs.readFileSync('ssl/totalrp3.crt')
-};
 
 /**
  * Get port from environment and store in Express.
  */
+
 var port = normalizePort(process.env.PORT || '8080');
 app.set('port', port);
-var securedPort = normalizePort('8443');
-app.set('httpsPort', securedPort);
+
+/**
+ * Create HTTP server.
+ */
 
 var server = http.createServer(app);
-var secureServer = https.createServer(ssl_options, app);
 
-secureServer.listen(securedPort);
-server.listen(port);
 /**
  * Listen on provided port, on all network interfaces.
  */
+
+server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
-secureServer.on('error', onError);
-secureServer.on('listening', onListening);
 
 /**
  * Normalize a port into a number, string, or false.
@@ -89,5 +82,9 @@ function onError(error) {
  */
 
 function onListening() {
-	debug('Server started');
+	var addr = server.address();
+	var bind = typeof addr === 'string'
+		? 'pipe ' + addr
+		: 'port ' + addr.port;
+	debug('Listening on ' + bind);
 }

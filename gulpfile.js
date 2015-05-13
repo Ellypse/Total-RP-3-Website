@@ -10,15 +10,28 @@ var gulp = require('gulp'),
 	node;
 
 
+
+/**
+ * $ gulp server
+ * Description: Launch node server. If there's a server already running, kill it.
+ */
+gulp.task('server', function () {
+	if (node) node.kill();
+	node = spawn('node', ['./server.js'], {stdio: 'inherit'});
+	node.on('close', function (code) {
+		if (code === 8) {
+			gulp.log('Error detected, waiting for changes...');
+		}
+	});
+});
+
 /**
  * $ gulp
  * Description: Launch node server.
- * Copy dependencies to public lib folder
  * Watch for changes in JavaScript files to reload server.
  * Watch for changes in the .less files to compile them to css
  */
 gulp.task('default', function () {
-	gulp.run('bower');
 	gulp.run('server');
 
 	gulp.watch(['./*.js','./routes/**/*.js',['./views/**/*.html']], function () {
@@ -45,38 +58,6 @@ gulp.task('css', function () {
 		}))
 		.pipe(postcss(processors))
 		.pipe(gulp.dest('./public/stylesheets'));
-});
-
-/**
- * $ gulp bower
- * Description : Copy distribution minified version of bower dependencies to public lib folder
- */
-gulp.task('bower', function() {
-	gulp.src('./bower_components/**/dist/**/*.min.*')
-		.pipe(gulp.dest('public/libs/'))
-});
-
-/**
- * $ gulp build
- * Description : Do everything needed to make sure we can deploy on the server
- */
-gulp.task('build', function() {
-	gulp.run("bower");
-	gulp.run("css");
-});
-
-/**
- * $ gulp server
- * Description: Launch node server. If there's a server already running, kill it.
- */
-gulp.task('server', function () {
-	if (node) node.kill();
-	node = spawn('node', ['./server.js'], {stdio: 'inherit'});
-	node.on('close', function (code) {
-		if (code === 8) {
-			gulp.log('Error detected, waiting for changes...');
-		}
-	});
 });
 
 // clean up if an error goes unhandled.

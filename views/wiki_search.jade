@@ -1,0 +1,17 @@
+extends wiki_layout
+
+block content
+    .row
+        .col-sm-3
+            include wiki_sidebar
+        .col-sm-9
+            section.content.search
+                h3.title= "Search results for " + search
+                if searchResults.length > 0
+                    each result in searchResults
+                        .page
+                            h2.page-title
+                                a(href="/wiki/#{result.slug}")= result.title
+                            .page-excerpt!= result.excerpt
+                else
+                    p.nothing-found= "Nothing found for " + search

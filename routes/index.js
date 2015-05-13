@@ -1,18 +1,12 @@
-/**
- * Node modules importation
- */
-var express = require('express'),
-	router = express.Router(),
-	fs = require('fs');
-
-/**
- * Controllers
- */
-var backgrounds = require("../controllers/backgrounds");
+var express = require('express');
+var router = express.Router();
+var fs = require('fs');
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-	res.render("index", {background : backgrounds.pickOne()});
+router.get('/', function(req, res, next) {
+	var backgrounds = fs.readdirSync("./public/images/backgrounds");
+	res.render('index.jade',{backgrounds:backgrounds});
+
 });
 
 module.exports = router;

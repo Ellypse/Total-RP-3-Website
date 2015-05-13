@@ -1,7 +1,0 @@
-extends localizationLayout
-block localizationContent
-    .container
-        h1= "Available locales :"
-        .btn-group-vertical(role="group")
-            each locale in locales
-                a.btn.btn-default(href="localization/" + locale.id)= locale.id
