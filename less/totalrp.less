@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lora);
+@import url(//fonts.googleapis.com/css?family=Lora);
 
 @wow-link-color: #ffb100;
 @wow-light-color: #efc9a0;
@@ -9,9 +9,18 @@
 @wow-button-background-start-color: #721500;
 @wow-button-background-end-color: #440402;
 @soft-shadow: rgba(0, 0, 0, 0.5);
+@bnet-color: #0072A8;
 
 .wow-serif {
 	font-family: 'Lora', serif
+}
+
+.wow-sans-serif {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.battleblue{
+	color: @bnet-color;
 }
 
 .wow-button-background {
@@ -37,14 +46,17 @@
 	border-radius: 2px;
 	color: @wow-link-color;
 	padding: 5px 10px 5px 10px;
+	text-decoration: none;
 
 	&:hover {
 		.wow-button-background-hover;
+		text-decoration: none;
 		cursor: pointer;
 	}
 
 	&:active {
 		.wow-button-background-active;
+		text-decoration: none;
 	}
 }
 
@@ -57,6 +69,10 @@
 		border: 1px solid @wow-link-color;
 		box-shadow: 0 0 5px @soft-shadow;
 	}
+}
+
+.inline-block{
+	display: inline-block;
 }
 
 * {
@@ -74,9 +90,9 @@ body {
 	background: @wow-background-color + #111;
 }
 
-a{
+a {
 	color: @wow-link-color;
-	&:hover{
+	&:hover {
 		color: white;
 	}
 }
@@ -89,12 +105,13 @@ a{
 	height: 100%;
 
 	form {
+		.wow-sans-serif;
 		border-radius: 5px;
 		background: @wow-background-color;
 		box-shadow: 0px 0px 5px black;
+		max-width: 450px;
 
 		legend {
-			.wow-serif;
 			color: @wow-link-color;
 			padding: 5px;
 			width: 100%;
@@ -109,7 +126,6 @@ a{
 			margin: 0;
 
 			label {
-				.wow-serif;
 				color: @wow-light-color;
 			}
 			input {
@@ -123,7 +139,7 @@ a{
 				width: 50%;
 			}
 
-			button {
+			button, a.button {
 				.wow-button;
 				display: inline-block;
 				width: 50%;
@@ -132,11 +148,69 @@ a{
 			p.error {
 				background: @wow-button-background-start-color;
 				border: 1px solid @wow-link-color;
-				.wow-serif;
 				color: @wow-link-color;
 				border-radius: 3px;
 				padding: 15px;
 			}
+
+			p.help {
+				font-size: 10pt;
+			}
 		}
 	}
+}
+
+.steps section {
+	.wow-sans-serif;
+	border-radius: 5px;
+	background: @wow-background-color;
+	border: 1px solid @wow-button-bottom-border-color;
+	box-shadow: 0px 0px 5px black;
+	max-width: 450px;
+	padding-top:0px;
+	text-align: center;
+
+	h1{
+		margin-top:0px;
+		color:@wow-link-color;
+		.wow-button;
+		border:none;
+		border-bottom: 1px solid @wow-border-color;
+		border-radius: 2px 2px 0px 0px;
+	}
+
+	p{
+		margin:25px;
+		color:white;
+	}
+
+	input[type="text"] {
+		.wow-input;
+		padding: 10px;
+		color: @wow-light-color;
+	}
+
+	input[type="submit"], button{
+		.wow-button;
+		margin: 10px 10px 30px 10px;
+		position:relative;
+
+		img{
+			width:25px;
+			height:25px;
+			position:absolute;
+			left:5px;
+			top:5px;
+		}
+
+		&.icon{
+			padding:10px;
+			padding-left:40px;
+
+		}
+	}
+}
+
+.steps-indicator{
+	display:none;
 }

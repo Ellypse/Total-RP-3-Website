@@ -10,11 +10,13 @@ var path = require("path"),
 	config = require("../../config");
 var debug = require("debug")("wiki");
 
+var User = require("../../services/user-service");
+
 /* GET home page. */
 router.get('/*', function (req, res, next) {
-	var battleTag = null;
+	var username = null;
 	if(req.user){
-		battleTag = req.user.battletag;
+		username = req.user.username;
 	}
 	if (!req.params[0]) {
 		req.params[0] = "/";
@@ -46,7 +48,7 @@ router.get('/*', function (req, res, next) {
 				config: config.wiki,
 				pages: pageList,
 				body_class: 'page-home',
-				battleTag: battleTag
+				username: username
 			});
 		} else {
 
@@ -79,7 +81,7 @@ router.get('/*', function (req, res, next) {
 						markdownContent : markdownContent,
 						body_class: 'page-' + raneto.cleanString(slug),
 						last_modified: moment(stat.mtime).format('Do MMM YYYY'),
-						battleTag: battleTag
+						username: username
 					});
 				} else {
 					// Serve static file

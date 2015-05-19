@@ -7,6 +7,7 @@
 var app = require('./app');
 var debug = require('debug')('server');
 var http = require('http');
+var https = require('https');
 var fs = require('fs');
 
 var options = {
@@ -23,8 +24,13 @@ app.set('port', port);
 /**
  * Create HTTP server.
  */
+if(process.env.DEBUG){
+	var server = https.createServer(options, app);
+}
+else{
+	var server = http.createServer(app);
+}
 
-var server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.

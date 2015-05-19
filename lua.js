@@ -2,7 +2,7 @@ var path = require("path"),
 	fs = require('fs'),
 	lua = require('luaparse'),
 	async = require("async"),
-	Locale = require('./model/locales');
+	Locale = require('./models/locales');
 
 fs.readFile("./locale_enUS.lua", 'utf8', function(err, data){
 

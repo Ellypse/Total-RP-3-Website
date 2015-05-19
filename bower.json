@@ -20,6 +20,8 @@
     "angular-utils-pagination": "~0.7.0",
     "highlightjs": "~8.5.0",
     "fitvids": "~1.1.0",
-    "masonry": "~3.3.0"
+    "masonry": "~3.3.0",
+    "angular-wizard": "~0.4.3",
+    "underscore": "~1.8.3"
   }
 }

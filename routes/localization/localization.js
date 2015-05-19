@@ -3,7 +3,7 @@ var router = express.Router(),
 	path = require("path"),
 	fs = require('fs'),
 	lua = require('luaparse'),
-	Locale = require('../../model/locales');
+	Locale = require('.././locales');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {

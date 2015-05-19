@@ -2,33 +2,83 @@
 Custom style used for the wiki
 */
 
+@bnet-color: #0072A8;
+
+* {
+	box-sizing: border-box;
+}
+
+//Battle.net login button
+.battlenet {
+	background-color: black;
+	border-radius: 3px;
+	border: 1px solid @bnet-color;
+	color: @bnet-color !important;
+	padding: 10px;
+	margin-top: 10px;
+
+	img {
+		width: 25px;
+		height: 25px;
+		margin-right: 15px;
+	}
+
+	&:hover {
+		background-color: @bnet-color;
+		border-color: black;
+		color: black !important;
+		img {
+			filter: brightness(0);
+		}
+	}
+}
+
+.fyre .fyre-box-wrapper {
+	.fyre-logo-drop {
+		left: 2px !important;
+	}
+
+	a.fyre-user-profile-link {
+		padding: 0;
+	}
+	img{
+		display: inline-block;
+	}
+}
+
+.battletag {
+	color: @bnet-color;
+}
+
 // Button to toggle between rendered and raw content
-#toggle-raw{
-	float:right;
+#toggle-raw {
+	float: right;
 }
 
 // Code comments
-.hljs-comment, .markdown .hljs-code{
+.hljs-comment, .markdown .hljs-code {
 	color: #F1B55E;
 }
 
 // Code keywords (if, else, function), markdown strong, html tags, titles
-.hljs-keyword, .hljs-strong, .hljs-tag, .hljs-tag .hljs-title{
+.hljs-keyword, .hljs-strong, .hljs-tag, .hljs-tag .hljs-title {
 	color: #f67469;
 }
 
 // Code attributes (objets members, functions and functions punctuation), markdown links
-.hljs-attribute, .hljs-value, .hljs-function, .hljs-link_label{
+.hljs-attribute, .hljs-value, .hljs-function, .hljs-link_label {
 	color: #c4a8db;
 }
 
-@media (max-width:767px) {
-	#sidebar{
-		display:none;
+@media (max-width: 767px) {
+	#sidebar {
+		display: none;
 	}
-	.home-search.jumbotron.row{
-		display:none;
+
+	.home-search.jumbotron.row {
+		display: none;
 	}
+
 	.container-fluid {
 		padding: 10px;
 		.col-sm-9 {

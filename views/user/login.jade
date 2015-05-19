@@ -1,21 +1,17 @@
 extends ../layout
 block css
     link(rel="stylesheet", href="/stylesheets/totalrp.css")
-    script(src="/libs/angular.min.js")
-    script(src="/javascripts/user/app.js")
 block content
-    div(ng-app="user", ng-controller="loginCtrl").container-flex
-        form(ng-submit="submit()")
+    .container-flex
+        form
             legend Login
             fieldset
-                p.error(ng-show="error", ng-bind="error")
-                p
-                    label(for='name') Username
-                    input#name(type='text', name="username", placeholder='Username', ng-model="user.username", ng-blur="validate(username)", required)
-                p
-                    label(for='password') Password
-                    input#password(type='password', placeholder='Password', ng-model="user.password", ng-blur="validate(password)", required)
-                p
-                    button(type='submit') Login
-                p Don't have an account?
-                    a(href="register")= " Register."
+                h2 Welcome
+                p The Total RP 3 website will soon offer various services that will require an account. We are currently testing the login process. If you decide to login during the testing phase, your username will be reserved for the future !
+                a.wow-button(href="auth/bnet")= "Login using Battle.net"
+                h5 Why using Battle.net ?
+                p.help
+                    | Good question.
+                    | We decided you use Battle.net as an authentication back-end for two reasons.
+                    | First, it's more secure as we do not store any critical information. You are being authenticated by Blizzard and Battle.net, they only provide us with a token so we can identify you. No account information for us to manage, no password.
+                    | Secondly, we will be able to access your characters information (names, pets, mounts) to provide you with more features in the future.

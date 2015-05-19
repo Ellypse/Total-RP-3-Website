@@ -34,14 +34,8 @@ html
         header.header
             .container-fluid
                 .row
-                    .col-sm-3
+                    .col-sm-6
                         a.logo(href="/wiki")= config.site_title
-                    .col-sm-3
-                        if battleTag
-                            h5= "Welcome " + battleTag
-                        else
-                            h5
-                                a(href="/user/auth/bnet") Login (experimental)
                     .col-sm-6
                         form.search-form.form-inline.pull-right(role="form" action="/wiki/")
                             .form-group
@@ -54,6 +48,16 @@ html
             block content
         footer.footer
             .container-fluid
+                if username
+                    a.battlenet
+                        img(src="/images/bnet.png")
+                        | You are logged as #{username}
+                else
+                    a(href="/user/login").battlenet
+                        img(src="/images/bnet.png")
+                        | Login using Battle.net
+
+
                 p.copyright.pull-right!= config.copyright
         script(src='/javascripts/libs/raneto.js')
         script(type="text/javascript", src="//static.wowhead.com/widgets/power.js")
