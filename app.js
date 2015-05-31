@@ -5,19 +5,19 @@ var express = require('express'),
 	bodyParser = require('body-parser'),
 	fs = require('fs'),
 	extend = require('extend'),
-	raneto = require('./raneto-custom'),
+	raneto = require('./controllers/raneto-custom'),
 	favicon = require('serve-favicon'),
 	lessMiddleware = require('less-middleware'),
 	autoprefixer = require('autoprefixer-core'),
-	passport = require('./auth/passport-auth'),
+	passport = require('./controllers/authentication/passport-auth'),
 	session = require('express-session'),
-	MongoStore = require('connect-mongo')(session);
+	MongoStore = require('connect-mongo')(session),
+	multer = require('multer');
 
 var config = require('./config'),
-	error_handlers = require('./error_handlers'),
+	error_handlers = require('./controllers/error_handlers'),
 	routes = require('./routes'),
 	mongoose = require('./database');
-
 
 var app = express();
 
@@ -33,7 +33,11 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(session({
 		secret: 'prlatot',
-		store: new MongoStore({ mongooseConnection: mongoose.connection })}
+		name: 'totalrp3_session',
+		store: new MongoStore({mongooseConnection: mongoose.connection}),
+		resave: false,
+		saveUninitialized: false
+	}
 ));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -44,14 +48,15 @@ app.use(lessMiddleware(path.join(__dirname, 'less'), {
 			return pathname.replace(path.sep + 'stylesheets' + path.sep, path.sep);
 		}
 	},
-	postprocess : {
+	postprocess: {
 		css: function(css, req){
 			return autoprefixer.process(css).css;
 		}
 	}
 }));
+app.use(multer({dest: './uploads'}));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/bower_components',  express.static(__dirname + '/bower_components'));
+app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
 extend(raneto.config, config.wiki);
 

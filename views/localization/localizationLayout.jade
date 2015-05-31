@@ -1,11 +1,17 @@
 extends ../layout
 
 block css
-    link(rel="stylesheet", href="/bower_components/bootstrap/dist/css/bootstrap.min.css")
-    script(src="/bower_components/angular/angular.min.js")
-    script(src="/bower_components/angular-utils-pagination/dirPagination.js")
-    script(src="/javascripts/localization/index.js")
+	link(rel="stylesheet", href="/bower_components/bootstrap/dist/css/bootstrap.min.css")
+	link(rel="stylesheet", href="/bower_components/angular-bootstrap/ui-bootstrap-csp.css")
+	link(rel="stylesheet", href="/stylesheets/totalrp.css")
+	script(src="/bower_components/angular/angular.min.js")
+	script(src="/bower_components/angular-utils-pagination/dirPagination.js")
+	script(src="bower_components/angular-bootstrap/ui-bootstrap.min.js")
+	script(src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js")
+	script(src="bower_components/ng-file-upload/ng-file-upload-shim.min.js")
+	script(src="bower_components/ng-file-upload/ng-file-upload.min.js")
+	script(src="/javascripts/localization/index.js")
 
 block content
-   div(ng-app="localization")
-      block localizationContent
+	div(ng-app="localization")
+		block localizationContent

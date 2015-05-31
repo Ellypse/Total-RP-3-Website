@@ -8,7 +8,7 @@ var express = require('express'),
 /**
  * Controllers
  */
-var backgrounds = require("../controllers/backgrounds");
+var backgrounds = require("../controllers/ui-tweaks/backgrounds");
 
 /* GET home page. */
 router.get('/', function (req, res, next) {

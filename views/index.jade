@@ -14,25 +14,25 @@ block content
     .title
         img.title(src='images/logo.png')
     .buttons
-        a(href='http://curse.totalrp3.info', target='blank')
-            .button= "Download on Curse"
-                img.icon(src='images/icons/crate.jpg')
-        a(href='/wiki')
-            .button= "Knowledge base"
-                img.icon(src='images/icons/book.jpg')
-        a(href='http://forums.telkostrasz.be', target='blank')
-            .button= "Forum"
-                img.icon(src='images/icons/people.jpg')
-        a(href='http://loc.totalrp3.info', target='blank')
-            .button= "Help localizing TRP 3"
-                img.icon(src='images/icons/friends.jpg')
+        .button
+            a(href='http://curse.totalrp3.info', target='blank')= "Download on Curse"
+                .icon(style='background-image: url("images/icons/crate.jpg")')
+        .button
+            a(href='/wiki')= "Knowledge base"
+                .icon(style='background-image: url("images/trp3_wiki.gif")')
+        .button
+            a(href='http://forums.telkostrasz.be', target='blank')= "Forum"
+                .icon(style='background-image: url("images/icons/people.jpg")')
+        .button
+            a(href='/localization')= "Help localizing TRP 3"
+                .icon(style='background-image: url("images/icons/friends.jpg")')
     .buttons
-        a(href='http://twitter.com/EllypseCelwe', target='blank')
-            .button= "Follow @Ellypse"
-                img.icon(src='images/icons/ellypse.jpg')
-        a(href='http://twitter.com/Telkostrasz', target='blank')
-            .button= "Follow @Telkostrasz"
-                img.icon(src='images/icons/telko.jpg')
+        .button
+            a(href='http://twitter.com/EllypseCelwe', target='blank')= "Follow @Ellypse"
+                .icon(style='background-image: url("images/icons/ellypse.jpg")')
+        .button
+            a(href='http://twitter.com/Telkostrasz', target='blank')= "Follow @Telkostrasz"
+                .icon(style='background-image: url("images/icons/telko.jpg")')
 
     script(src="//static.getclicky.com/js", type="text/javascript")
     script(type="text/javascript").

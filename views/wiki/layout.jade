@@ -18,7 +18,7 @@ html
         meta(property="og:site_name", content=config.site_title)
         meta(property="article:author", content="https://www.facebook.com/pages/Total-RP-3/170199479668355")
         meta(property="article:publisher", content="https://www.facebook.com/pages/Total-RP-3/170199479668355")
-        link(rel='icon', href="/favicon.ico")
+        link(rel='icon', href="/favicon.png")
         link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
         link(rel='stylesheet', href='/bower_components/highlightjs/styles/monokai.css')
         link(rel='stylesheet', href='/stylesheets/raneto.css')
@@ -35,7 +35,9 @@ html
             .container-fluid
                 .row
                     .col-sm-6
-                        a.logo(href="/wiki")= config.site_title
+                        a.logo(href="/wiki")
+                            img(src="/images/trp3_wiki.gif")
+                            = config.site_title
                     .col-sm-6
                         form.search-form.form-inline.pull-right(role="form" action="/wiki/")
                             .form-group
@@ -59,6 +61,8 @@ html
 
 
                 p.copyright.pull-right!= config.copyright
+                p.copyright.pull-right= "Logos for Total RP 3 are designed by "
+                    a(href="http://quentincharton.fr/", target="_blank") Quentin Charton.
         script(src='/javascripts/libs/raneto.js')
         script(type="text/javascript", src="//static.wowhead.com/widgets/power.js")
         script.

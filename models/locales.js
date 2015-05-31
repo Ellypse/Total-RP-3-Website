@@ -1,17 +1,15 @@
-var mongoose = require('../database.js')
-	, Schema = mongoose.Schema;
+var mongoose = require('../database.js');
 
-var localeSchema = Schema({
-	id: String,
-	strings : [{
-		key : String,
-		value : String,
-		updated: { type: Date, default: Date.now },
-		valueEN : String,
-		shouldBeUpdated : Boolean
+var Locale = mongoose.model('Locale', {
+	localeIdentifier: String,
+	localeName: String,
+	localeContent: [{
+		key: String,
+		value: String,
+		updated: {type: Date, default: Date.now},
+		valueEN: String,
+		shouldBeUpdated: {type: Boolean, default: true}
 	}]
 });
-
-var Locale = mongoose.model('Locales', localeSchema);
 
 module.exports = Locale;

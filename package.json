@@ -6,6 +6,7 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "app-root-path": "^1.0.0",
     "async": "^0.9.0",
     "autoprefixer-core": "^5.1.11",
     "bcrypt": "^0.8.3",
@@ -29,9 +30,12 @@
     "moment": "^2.6.0",
     "mongoose": "^4.0.2",
     "morgan": "~1.0.0",
+    "multer": "^0.1.8",
     "passport": "^0.2.1",
     "passport-bnet": "^1.1.1",
+    "q": "^1.4.1",
     "request": "^2.55.0",
+    "request-promise": "^0.4.2",
     "serve-favicon": "^2.2.0",
     "underscore": "^1.6.0",
     "underscore.string": "^2.3.3",

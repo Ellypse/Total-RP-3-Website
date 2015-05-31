@@ -1,46 +1,55 @@
 extends ../layout
 
 block css
-    link(rel="stylesheet", href="/stylesheets/totalrp.css")
-    link(rel="stylesheet", href="/bower_components/angular-wizard/dist/angular-wizard.min.css")
-    script(src="/javascripts/libs/angular.min.js")
-    script(type="text/javascript", src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js")
-    script(src="/bower_components/angular-wizard/dist/angular-wizard.min.js")
-    script(src="/javascripts/user/register.js")
+	link(rel="stylesheet", href="/stylesheets/totalrp.css")
+	link(rel="stylesheet", href="/stylesheets/angular-wizard.min.css")
+	script(src="/javascripts/libs/angular.min.js")
+	script(src="/javascripts/libs/lodash.js")
+	script(src="/javascripts/libs/angular-wizard.min.js")
+	script(src="/javascripts/user/register.js")
 block content
-    .container-flex(ng-app="register", ng-controller="registerCtrl")
-        wizard(on-finish="finishedWizard()")
+	.container-flex(ng-app="register", ng-controller="registerCtrl", ng-cloak)
+		wizard(on-finish="finishedWizard()")
 
-            wz-step
-                h1 Welcome {{battletag}}
-                p This is the first time we see you around here. Let's get you started.
-                input(type="submit", wz-next, value="Let's go!")
+			wz-step
+				h1 Welcome {{battletag}}
+				p This is the first time we see you around here. Let's get you started.
+				input(type="submit", wz-next, value="Let's go!")
 
-            wz-step
-                h1 Username
-                p For now, we only know you as {{battletag}}. This is your <span class="battleblue">Battle.net tag</span> (or <span class="battleblue">BattleTag</span>).
-                p You can choose a custom username or use your <span class="battleblue">BattleTag</span> as your username.
-                input(type="submit", ng-click="goToEmail()", value="Use my BattleTag")
-                input(type="submit", ng-click="goToCustomUsername()", value="Nope, I have something else in mind")
+			wz-step
+				h1 Username
+				p For now, we only know you as {{battletag}}. This is your <span class="battleblue">Battle.net tag</span> (or <span class="battleblue">BattleTag</span>).
+				p You can choose a custom username or use your <span class="battleblue">BattleTag</span> as your username.
+				input(type="submit", ng-click="goToEmail()", value="Use my BattleTag")
+				input(type="submit", ng-click="goToCustomUsername()", value="Nope, I have something else in mind")
 
-            wz-step(title="username")
-                h1 Custom username
-                p Alright, let's pick a nice username for ya!
-                p I've found these characters you seem to play a lot. If you want to use one of your characters name as your username, click on that character.
-                button.icon(ng-repeat="character in characters | orderBy : '-level' | limitTo: 5", ng-click="pickCharacterName(character.name)")
-                    img(ng-src="//eu.battle.net/static-render/eu/{{character.thumbnail}}?alt=wow/static/images/2d/avatar/{{character.race}}-{{character.gender}}.jpg")
-                    | {{character.name}}
-                p Or you can enter a custom username here
-                input(type="text", ng-model="user.username")
-                input(type="submit", wz-next, value="Continue")
-            wz-step(title="email")
-                h1 Email address
-                p This step is completely optional. You can provide us with your email address so we can send you notifications about important updates. We won't spam you or share your email address with some strangers.
-                input(type="text", ng-model="user.email")
-                input(type="submit", wz-next, value="Continue")
-            wz-step
-                h1 All done!
-                p Great, your account is all set up <b>{{user.username}}</b>. Click on the button bellow to finish.
-                input(type="submit", ng-click="submit()", value="The button bellow")
-    script.
-        var battletag = '#{battletag}';
+			wz-step(data-title="username")
+				h1 Custom username
+				p Alright, let's pick a nice username!
+				p(ng-show="characters.length==0") I'm searching some cool usernames for you. Please wait…
+				.spinner(ng-show="characters.length==0")
+					.bounce1
+					.bounce2
+					.bounce3
+				p(ng-show="characters.length>0") I've found these characters you seem to play a lot. If you want to use one of your characters name as your username, click on that character.
+				button.icon(ng-repeat="character in characters | orderBy : '-level' | limitTo: 7", ng-click="pickCharacterName(character.name)")
+					img(ng-src="//eu.battle.net/static-render/eu/{{character.thumbnail}}?alt=wow/static/images/2d/avatar/{{character.race}}-{{character.gender}}.jpg")
+					| {{character.name}}
+					br
+					small ({{character.realm}})
+				p Or you can enter a custom username here
+				input(type="text", ng-model="user.username")
+				input(type="submit", wz-next, value="Continue")
+			wz-step(data-title="email")
+				h1 Email address
+				p Alright, your username is <span class='wow-link-color'>{{user.username}}</span>.
+				p This step is completely optional. You can provide us with your email address so we can send you notifications about important updates. We won't spam you or share your email address with some strangers.
+				input(type="email", ng-model="user.email", placeholder="(optional)")
+				input(type="submit", wz-next, value="Continue")
+			wz-step
+				h1 All done!
+				p Great, your account is all set up <b>{{user.username}}</b>. Click on the button bellow to finish.
+				input(type="submit", ng-click="submit()", value="The button bellow")
+	script.
+		var battletag = '#{battletag}';
+		var destination = '#{destination}';

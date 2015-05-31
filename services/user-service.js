@@ -19,9 +19,7 @@ exports.addUser = function(user, next){
 };
 
 exports.findById = function(id, next){
-	console.log(id);
 	User.findOne({'battlenet.id' : id}, function(err, user){
-		console.log(user, id);
 		if(err){
 			return next(err);
 		}
