@@ -41,7 +41,7 @@ app.use(session({
 ));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(lessMiddleware(path.join(__dirname, 'less'), {
+app.use(lessMiddleware(path.join(__dirname, 'styles'), {
 	dest: path.join(__dirname, 'public'),
 	preprocess: {
 		path: function(pathname, req){
