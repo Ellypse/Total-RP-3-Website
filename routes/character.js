@@ -1,8 +1,7 @@
 /**
  * Node modules importation
  */
-var appRoot = require('app-root-path'),
-	express = require('express'),
+var express = require('express'),
 	router = express.Router(),
 	request = require('request-promise'),
 	Q = require('q');
@@ -10,7 +9,7 @@ var appRoot = require('app-root-path'),
 /**
  * Controllers
  */
-var isAuthenticated = require(appRoot + "/controllers/authentication/passport-auth").isAuthenticated;
+var isAuthenticated = appReq("/controllers/authentication/passport-auth").isAuthenticated;
 
 /**
  * GET / Returns the list of characters for the current user using the Battle.net API

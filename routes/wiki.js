@@ -2,7 +2,6 @@
  * Node modules
  */
 var express = require('express'),
-	appRoot = require('app-root-path'),
 	router = express.Router(),
 	path = require("path"),
 	fs = require('fs'),
@@ -15,17 +14,17 @@ var express = require('express'),
 /**
  * Controllers
  */
-var raneto = require(appRoot + '/controllers/raneto-custom');
+var raneto = appReq('/controllers/raneto-custom');
 
 /**
  * Config
  */
-var config = require(appRoot + "/config");
+var config = appReq("/config");
 
 /**
  * Services
  */
-var User = require(appRoot + "/services/user-service");
+var User = appReq("/services/user-service");
 
 /* GET home page. */
 router.get('/*', function(req, res, next){

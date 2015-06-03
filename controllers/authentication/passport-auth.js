@@ -7,12 +7,12 @@ var BnetStrategy = require('passport-bnet').Strategy;
 /**
  * Config
  */
-var bnetConfig = require('./battlenet-config');
+var bnetConfig = appReq('/auth/battlenet-config');
 
 /**
  * Services
  */
-var User = require('../../services/user-service');
+var User = appReq('/services/user-service');
 
 passport.use(new BnetStrategy(bnetConfig, function(accessToken, refreshToken, profile, done) {
 	return done(null, {accessToken : accessToken, battlenet : profile});

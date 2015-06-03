@@ -1,4 +1,4 @@
-var Locale = require('../models/locales');
+var Locale = appReq('/models/locales');
 
 exports.addNewLocale = function(locale){
 	var newLocale = new Locale({

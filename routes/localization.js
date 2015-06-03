@@ -2,7 +2,6 @@
  * Node modules
  */
 var express = require('express'),
-	appRoot = require('app-root-path'),
 	router = express.Router(),
 	debug = require('debug')('uploader'),
 	fs = require('fs');
@@ -10,12 +9,12 @@ var express = require('express'),
 /**
  * Controllers
  */
-var parser = require(appRoot + "/controllers/lua-parser/parser"),
-	isAuthenticated = require(appRoot + "/controllers/authentication/passport-auth").isAuthenticated;
+var parser = appReq("/controllers/lua-parser/parser"),
+	isAuthenticated = appReq("/controllers/authentication/passport-auth").isAuthenticated;
 /**
  * Services
  */
-var LocaleService = require(appRoot + "/services/locale-service");
+var LocaleService = appReq("/services/locale-service");
 
 /* GET home page. */
 router.get('/', isAuthenticated, function (req, res){

@@ -2,11 +2,11 @@ var appRoot = require('app-root-path');
 
 var routes = function(app){
 
-	app.use('/', require(appRoot + '/routes/index'))
-		.use("/wiki", require(appRoot + '/routes/wiki'))
-		.use("/user", require(appRoot + '/routes/user'))
-		.use('/character', require(appRoot + '/routes/character'))
-		.use('/localization', require(appRoot + '/routes/localization'));
+	app.use('/', appReq('/routes/index'))
+		.use("/wiki", appReq('/routes/wiki'))
+		.use("/user", appReq('/routes/user'))
+		.use('/character', appReq('/routes/character'))
+		.use('/localization', appReq('/routes/localization'));
 
 };
 

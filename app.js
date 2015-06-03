@@ -5,19 +5,22 @@ var express = require('express'),
 	bodyParser = require('body-parser'),
 	fs = require('fs'),
 	extend = require('extend'),
-	raneto = require('./controllers/raneto-custom'),
 	favicon = require('serve-favicon'),
 	lessMiddleware = require('less-middleware'),
 	autoprefixer = require('autoprefixer-core'),
-	passport = require('./controllers/authentication/passport-auth'),
 	session = require('express-session'),
 	MongoStore = require('connect-mongo')(session),
 	multer = require('multer');
 
-var config = require('./config'),
-	error_handlers = require('./controllers/error_handlers'),
-	routes = require('./routes'),
-	mongoose = require('./database');
+// appReq() will require using the app path
+global.appReq = require('app-root-path').require;
+
+var config = appReq('/config'),
+	error_handlers = appReq('/controllers/error_handlers'),
+	routes = appReq('/routes'),
+	mongoose = appReq('/database'),
+	raneto = appReq('/controllers/raneto-custom'),
+	passport = appReq('/controllers/authentication/passport-auth');
 
 var app = express();
 

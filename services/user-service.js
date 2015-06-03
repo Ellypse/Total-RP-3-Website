@@ -1,4 +1,4 @@
-var User = require('../models/user');
+var User = appReq('/models/user');
 
 exports.addUser = function(user, next){
 	var newUser = new User({

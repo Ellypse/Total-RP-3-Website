@@ -1,8 +1,7 @@
 /**
  * Node modules importation
  */
-var appRoot = require('app-root-path'),
-	express = require('express'),
+var express = require('express'),
 	router = express.Router(),
 	passport = require('passport'),
 	debug = require('debug')('app');
@@ -10,8 +9,8 @@ var appRoot = require('app-root-path'),
 /**
  * Controllers
  */
-var User = require(appRoot + '/services/user-service'),
-	isAuthenticated = require(appRoot + "/controllers/authentication/passport-auth").isAuthenticated;
+var User = appReq('/services/user-service'),
+	isAuthenticated = appReq("/controllers/authentication/passport-auth").isAuthenticated;
 
 /**
  * GET /user/

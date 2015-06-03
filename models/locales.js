@@ -1,4 +1,4 @@
-var mongoose = require('../database.js');
+var mongoose = appReq('/database.js');
 
 var Locale = mongoose.model('Locale', {
 	localeIdentifier: String,

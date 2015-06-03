@@ -1,4 +1,4 @@
-var mongoose = require('../database.js'),
+var mongoose = appReq('/database.js'),
 	Schema = mongoose.Schema;
 
 var userSchema = new Schema({
