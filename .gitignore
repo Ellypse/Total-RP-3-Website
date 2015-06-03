@@ -1,16 +1,23 @@
+# IntelliJ files
 .idea/
+*.iml
+
+# Mac hidden files
 .DS_Store
 
+# Node files
 node_modules
-content
-
-public/images/backgrounds
-content/**/*
 npm-debug.log
 
+# Bower files
 bower_components
-default.iml
-Total RP 3.iml
+
+# Content uploaded via FTP
+content
+public/images/backgrounds
 uploads
+
+# Files generated at runtime
 public/stylesheets/totalrp.css
 public/stylesheets/wiki_custom.css
+public/stylesheets/style.css
