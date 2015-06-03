@@ -12,3 +12,5 @@ bower_components
 default.iml
 Total RP 3.iml
 uploads
+public/stylesheets/totalrp.css
+public/stylesheets/wiki_custom.css
