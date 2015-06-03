@@ -7,7 +7,7 @@ var BnetStrategy = require('passport-bnet').Strategy;
 /**
  * Config
  */
-var bnetConfig = appReq('/auth/battlenet-config');
+var bnetConfig = appReq('/controllers/authentication/battlenet-config');
 
 /**
  * Services
