@@ -21,6 +21,7 @@ block localizationContent
 		tabset
 			tab(ng-repeat="locale in locales | filter : search.text", heading="{{locale.localeName}}")
 				dir-pagination-controls
+				button Save changes
 				.col-sm-12.locale(dir-paginate="loc in locale.localeContent | filter : search.text | itemsPerPage: 10 ")
 					.col-sm-3
 						label {{loc.key}}

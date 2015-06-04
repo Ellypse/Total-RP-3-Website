@@ -19,17 +19,17 @@ html
         meta(property="article:author", content="https://www.facebook.com/pages/Total-RP-3/170199479668355")
         meta(property="article:publisher", content="https://www.facebook.com/pages/Total-RP-3/170199479668355")
         link(rel='icon', href="/favicon.png")
-        link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
-        link(rel='stylesheet', href='/bower_components/highlightjs/styles/monokai.css')
-        link(rel='stylesheet', href='/stylesheets/raneto.css')
+        link(rel='stylesheet', href='/libs/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/libs/highlightjs/styles/monokai.css')
+        link(rel='stylesheet', href='/libs/raneto/raneto.css')
         link(rel='stylesheet', href='/stylesheets/wiki_custom.css')
         if meta
 
-        script(src='/bower_components/jquery/dist/jquery.min.js')
-        script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
-        script(src='/bower_components/highlightjs/highlight.pack.js')
-        script(src='/bower_components/fitvids/jquery.fitvids.js')
-        script(src='/bower_components/masonry/dist/masonry.pkgd.min.js')
+        script(src='/libs/jquery/dist/jquery.min.js')
+        script(src='/libs/bootstrap/dist/js/bootstrap.min.js')
+        script(src='/libs/highlightjs/highlight.pack.js')
+        script(src='/libs/fitvids/jquery.fitvids.js')
+        script(src='/libs/masonry/dist/masonry.pkgd.min.js')
     body
         header.header
             .container-fluid
@@ -63,7 +63,4 @@ html
                 p.copyright.pull-right!= config.copyright
                 p.copyright.pull-right= "Logos for Total RP 3 are designed by "
                     a(href="http://quentincharton.fr/", target="_blank") Quentin Charton.
-        script(src='/javascripts/libs/raneto.js')
-        script(type="text/javascript", src="//static.wowhead.com/widgets/power.js")
-        script.
-            var wowhead_tooltips = { "colorlinks": true, "iconizelinks": true, "renamelinks": true };
+        script(src='/libs/raneto/raneto.js')

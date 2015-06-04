@@ -2,10 +2,10 @@ extends ../layout
 
 block css
 	link(rel="stylesheet", href="/stylesheets/totalrp.css")
-	link(rel="stylesheet", href="/stylesheets/angular-wizard.min.css")
-	script(src="/javascripts/libs/angular.min.js")
-	script(src="/javascripts/libs/lodash.js")
-	script(src="/javascripts/libs/angular-wizard.min.js")
+	link(rel="stylesheet", href="/libs/angular-wizard/dist/angular-wizard.min.css")
+	script(src="/libs/angular/angular.min.js")
+	script(src="/libs/lodash/dist/lodash.min.js")
+	script(src="/libs/angular-wizard/dist/angular-wizard.min.js")
 	script(src="/javascripts/user/register.js")
 block content
 	.container-flex(ng-app="register", ng-controller="registerCtrl", ng-cloak)

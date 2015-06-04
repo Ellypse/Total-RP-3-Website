@@ -48,7 +48,7 @@ router.get('/*', function(req, res, next){
 			search: searchQuery,
 			searchResults: searchResults,
 			body_class: 'page-search',
-			battleTag: battleTag
+			battleTag: username
 		});
 	}
 	else if(req.params[0]){

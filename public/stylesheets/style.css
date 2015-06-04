@@ -1,1 +1,99 @@
-@import url(//fonts.googleapis.com/css?family=Lora);*{font-family:arial,sans-serif}body{background-repeat:no-repeat;background-position:center;background-attachment:fixed;background-size:cover;top:0;bottom:0;left:0;right:0;z-index:0}body .title{width:512px;margin:0 auto 20px auto;max-width:100%;z-index:1;position:relative}body .buttons{width:300px;margin:0 auto 80px auto;z-index:1;position:relative}body .buttons .button{width:298px;height:60px;padding-top:20px;position:relative;box-sizing:border-box;margin-bottom:40px}body .buttons .button::before{content:" ";position:absolute;top:-17px;left:-7px;width:314px;height:90px;z-index:-1;background:url("/images/achievement_button.png") no-repeat}body .buttons .button a{position:absolute;width:100%;height:100%;top:0;left:0;line-height:52px;font-size:10pt;font-weight:bold;font-family:'Lora',serif;text-decoration:none;text-align:center;color:#ffd51b;text-shadow:2px 2px 2px rgba(0,0,0,0.75);cursor:pointer}body .buttons .button a:hover{color:white}body .buttons .button a:hover .icon{-webkit-filter:brightness(150%);filter:brightness(150%)}body .buttons .button a .icon{position:absolute;left:11px;top:8px;width:41px;height:41px;border-radius:4px;background-size:100%}body .buttons .button a .icon::after{content:"";background:url("/images/icons/border.png") 100% no-repeat;top:-2px;bottom:-2px;left:-2px;right:-2px;position:absolute;background-size:100%}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fira Sans'), local('FiraSans-Regular'), url('/fonts/fira_sans.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lora'), local('Lora-Regular'), url('/fonts/lora.ttf') format('truetype');
+}
+* {
+  font-family: arial, sans-serif;
+}
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+body .title {
+  width: 512px;
+  margin: 0 auto 20px auto;
+  max-width: 100%;
+  z-index: 1;
+  position: relative;
+}
+body .buttons {
+  width: 300px;
+  margin: 0 auto 80px auto;
+  z-index: 1;
+  position: relative;
+}
+body .buttons .button {
+  width: 298px;
+  height: 60px;
+  padding-top: 20px;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+}
+body .buttons .button::before {
+  content: " ";
+  position: absolute;
+  top: -17px;
+  left: -7px;
+  width: 314px;
+  height: 90px;
+  z-index: -1;
+  background: url("/images/achievement_button.png") no-repeat;
+}
+body .buttons .button a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  line-height: 52px;
+  font-size: 10pt;
+  font-weight: bold;
+  font-family: 'Lora', serif;
+  text-decoration: none;
+  text-align: center;
+  color: #ffd51b;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+body .buttons .button a:hover {
+  color: white;
+}
+body .buttons .button a:hover .icon {
+  -webkit-filter: brightness(150%);
+          filter: brightness(150%);
+}
+body .buttons .button a .icon {
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  width: 41px;
+  height: 41px;
+  border-radius: 4px;
+  background-size: 100%;
+}
+body .buttons .button a .icon::after {
+  content: "";
+  background: url("/images/icons/border.png") 100% no-repeat;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  position: absolute;
+  background-size: 100%;
+}

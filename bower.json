@@ -1,11 +1,11 @@
 {
   "name": "Total RP 3",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "authors": [
     "Renaud Parize <renaudparize@me.com>"
   ],
   "license": "MIT",
-  "homepage": "/",
+  "homepage": "/",np
   "ignore": [
     "**/.*",
     "node_modules",

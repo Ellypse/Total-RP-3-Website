@@ -7,6 +7,8 @@ var gulp = require('gulp'),
 	spawn = require('child_process').spawn,
 	postcss = require('gulp-postcss'),
 	autoprefixer = require('autoprefixer-core'),
+	debug = require('gulp-debug'),
+	clean = require('gulp-clean'),
 	node;
 
 
@@ -18,6 +20,7 @@ var gulp = require('gulp'),
  * Watch for changes in the .less files to compile them to css
  */
 gulp.task('default', function () {
+	gulp.run('clean');
 	gulp.run('bower');
 	gulp.run('server');
 
@@ -26,7 +29,6 @@ gulp.task('default', function () {
 	});
 
 	gulp.watch('./less/*.less', function () {
-		console.log("Compiling less.");
 		gulp.run('css');
 	});
 });
@@ -37,12 +39,13 @@ gulp.task('default', function () {
  */
 gulp.task('css', function () {
 	var processors = [
-		autoprefixer({browsers: ['last 3 version']})
+		autoprefixer({browsers: ['last 3 versions']})
 	];
-	gulp.src('./less/**/*.less')
+	gulp.src('./styles/**/*.less')
 		.pipe(less({
 			paths: [path.join(__dirname, 'less', 'includes')]
 		}))
+		.pipe(debug({title: 'Less files :'}))
 		.pipe(postcss(processors))
 		.pipe(gulp.dest('./public/stylesheets'));
 });
@@ -52,7 +55,10 @@ gulp.task('css', function () {
  * Description : Copy distribution minified version of bower dependencies to public lib folder
  */
 gulp.task('bower', function() {
-	gulp.src('./bower_components/**/dist/**/*.min.*')
+	gulp.src(['./bower_components/**/*.js',
+		'./bower_components/**/*.css',
+		'./bower_components/**/*.map'])
+		.pipe(debug({title: 'Bower:'}))
 		.pipe(gulp.dest('public/libs/'))
 });
 
@@ -77,6 +83,23 @@ gulp.task('server', function () {
 			gulp.log('Error detected, waiting for changes...');
 		}
 	});
+});
+
+/**
+ * $ gulp clean
+ * Empty folders which content is generated
+ */
+gulp.task('clean', function(){
+	var filesAndDirectories = [
+		// Files and directories to purge
+		'./public/stylesheets/*',
+		'./public/libs/*',
+		// Files and directories to preserve
+		'!./public/libs/raneto',
+		'!./public/libs/livefyre'];
+	gulp.src(filesAndDirectories)
+		.pipe(clean({force: true}))
+		.pipe(debug({title:'Clean'}));
 });
 
 // clean up if an error goes unhandled.
