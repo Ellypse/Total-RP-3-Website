@@ -150,6 +150,9 @@ body {
     border-radius: 0;
     border: none;
   }
+  .container-fluid .col-sm-9 .content.search {
+    padding: 30px;
+  }
   .col {
     width: 100%;
   }
