@@ -26,8 +26,8 @@ block content
 			wz-step(data-title="username")
 				h1 Custom username
 				p Alright, let's pick a nice username!
-				p(ng-show="characters.length==0") I'm searching some cool usernames for you. Please wait…
-				.spinner(ng-show="characters.length==0")
+				p(ng-show="charactersRequestPending") I'm searching some cool usernames for you. Please wait…
+				.spinner(ng-show="charactersRequestPending")
 					.bounce1
 					.bounce2
 					.bounce3
@@ -37,7 +37,7 @@ block content
 					| {{character.name}}
 					br
 					small ({{character.realm}})
-				p Or you can enter a custom username here
+				p(ng-show="characters.length>0") Or you can enter a custom username here
 				input(type="text", ng-model="user.username")
 				input(type="submit", wz-next, value="Continue")
 			wz-step(data-title="email")

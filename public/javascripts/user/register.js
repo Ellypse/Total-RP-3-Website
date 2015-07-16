@@ -4,6 +4,7 @@ angular.module("register", ['mgo-angular-wizard'])
 		$scope.battletag = battletag;
 		$scope.characters = [];
 		$scope.user = {};
+		$scope.charactersRequestPending = true;
 
 		$scope.goToCustomUsername = function(){
 			WizardHandler.wizard().goTo("username");
@@ -33,8 +34,16 @@ angular.module("register", ['mgo-angular-wizard'])
 		};
 
 		// On page load, request the list of characters for the current user to the server
-		$http.get("/character").success(function(data){
-			// Set the scope characters to the result of the request
-			$scope.characters = data.characters;
-		});
+		$http.get("/character")
+			.success(function(data){
+				// Set the scope characters to the result of the request
+				$scope.characters = data.characters;
+			})
+			.error(function(error){
+				console.warn(error);
+				$scope.characters = [];
+			})
+			.finally(function(){
+				$scope.charactersRequestPending = false;
+			});
 	});

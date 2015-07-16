@@ -30,7 +30,11 @@ router.get('/', isAuthenticated, function(req, res){
 		request("https://" + region + charactersUri).then(function(data){
 			// Resolve the promise once we get the result of the request
 			deferred.resolve(JSON.parse(data).characters);
-		});
+		},
+			function(error){
+				console.warn(error);
+				deferred.reject(error); // If an error occured, we reject the promise
+			});
 		// Add the promise to the array of promises
 		the_promises.push(deferred.promise);
 	});
