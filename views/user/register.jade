@@ -12,20 +12,30 @@ block content
 		wizard(on-finish="finishedWizard()")
 
 			wz-step
-				h1 Welcome {{battletag}}
-				p This is the first time we see you around here. Let's get you started.
+				:markdown
+					# Welcome {{battletag}}
+
+					This is the first time we see you around here. Let's get you started.
+
 				input(type="submit", wz-next, value="Let's go!")
 
 			wz-step
-				h1 Username
-				p For now, we only know you as {{battletag}}. This is your <span class="battleblue">Battle.net tag</span> (or <span class="battleblue">BattleTag</span>).
-				p You can choose a custom username or use your <span class="battleblue">BattleTag</span> as your username.
+				:markdown
+					# Username
+
+					For now, we only know you as {{battletag}}. This is your <span class="battleblue">Battle.net tag</span> (or <span class="battleblue">BattleTag</span>).
+
+					You can choose a custom username or use your <span class="battleblue">BattleTag</span> as your username.
+
 				input(type="submit", ng-click="goToEmail()", value="Use my BattleTag")
 				input(type="submit", ng-click="goToCustomUsername()", value="Nope, I have something else in mind")
 
 			wz-step(data-title="username")
-				h1 Custom username
-				p Alright, let's pick a nice username!
+				:markdown
+					# Custom username
+
+					Alright, let's pick a nice username!
+
 				p(ng-show="charactersRequestPending") I'm searching some cool usernames for you. Please wait…
 				.spinner(ng-show="charactersRequestPending")
 					.bounce1
@@ -41,9 +51,13 @@ block content
 				input(type="text", ng-model="user.username")
 				input(type="submit", wz-next, value="Continue")
 			wz-step(data-title="email")
-				h1 Email address
-				p Alright, your username is <span class='wow-link-color'>{{user.username}}</span>.
-				p This step is completely optional. You can provide us with your email address so we can send you notifications about important updates. We won't spam you or share your email address with some strangers.
+				:markdown
+					# Email address
+
+					Alright, your username is <span class='wow-link-color'>{{user.username}}</span>.
+
+					This step is completely optional. You can provide us with your email address so we can send you notifications about important updates. We won't spam you or share your email address with some strangers.
+
 				input(type="email", ng-model="user.email", placeholder="(optional)")
 				p
 					input(type="submit", wz-previous, value="Go back and edit your username")
@@ -51,7 +65,7 @@ block content
 			wz-step
 				h1 All done!
 				p Great, your account is all set up <b>{{user.username}}</b>. Click on the button bellow to finish.
-				input(type="submit", ng-click="submit()", value="The button bellow")
+				input(type="submit", ng-click="submit()", value="The Button Bellow")
 	script.
 		var battletag = '#{battletag}';
 		var destination = '#{destination}';

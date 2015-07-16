@@ -8,12 +8,16 @@ block content
 		form
 			legend Login
 			fieldset
-				h2 Welcome
-				p.
+				:markdown
+					## Welcome
+
 					The Total RP 3 website will soon offer various services that will require an account. We are currently testing the login process. If you decide to login during the testing phase, your username will be reserved for the future !
+
 				a.wow-button(href="auth/bnet")= "Login using Battle.net"
+
 				h5
 					button(ng-click="showHelp = !showHelp") Why use Battle.net ?
+
 				div.help(ng-show="showHelp")
 					:markdown
 						Good question.
