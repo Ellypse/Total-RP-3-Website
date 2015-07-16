@@ -45,7 +45,9 @@ block content
 				p Alright, your username is <span class='wow-link-color'>{{user.username}}</span>.
 				p This step is completely optional. You can provide us with your email address so we can send you notifications about important updates. We won't spam you or share your email address with some strangers.
 				input(type="email", ng-model="user.email", placeholder="(optional)")
-				input(type="submit", wz-next, value="Continue")
+				p
+					input(type="submit", wz-previous, value="Go back and edit your username")
+					input(type="submit", wz-next, value="Continue")
 			wz-step
 				h1 All done!
 				p Great, your account is all set up <b>{{user.username}}</b>. Click on the button bellow to finish.

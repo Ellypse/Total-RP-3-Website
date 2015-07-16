@@ -175,14 +175,14 @@ h5 {
   background: linear-gradient(0deg, #610400, #330000);
   text-decoration: none;
 }
-.container-flex form fieldset p.error {
+.container-flex form fieldset .error {
   background: #721500;
   border: 1px solid #ffb100;
   color: #ffb100;
   border-radius: 3px;
   padding: 15px;
 }
-.container-flex form fieldset p.help {
+.container-flex form fieldset .help {
   font-size: 10pt;
 }
 .steps section {
