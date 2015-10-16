@@ -1,0 +1,388 @@
+@import 'fonts';
+
+@wow-link-color: #ffb100;
+@wow-light-color: #efc9a0;
+@wow-background-color: #1B0E07;
+@wow-border-color: #281812;
+@wow-button-top-border-color: #A01E00;
+@wow-button-bottom-border-color: #A01E00;
+@wow-button-background-start-color: #721500;
+@wow-button-background-end-color: #440402;
+@soft-shadow: rgba(0, 0, 0, 0.5);
+@bnet-color: #0072A8;
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+
+.battleblue{
+	color: @bnet-color;
+}
+
+.wow-button-background {
+	background: linear-gradient(0deg, @wow-button-background-start-color, @wow-button-background-end-color);
+}
+
+.wow-button-background-hover {
+	background: linear-gradient(0deg, @wow-button-background-start-color + #111111, @wow-button-background-end-color + #111111);
+}
+
+.wow-button-background-active {
+	background: linear-gradient(0deg, @wow-button-background-start-color - #111111, @wow-button-background-end-color - #111111);
+}
+
+.wow-button-borders {
+	border: 1px solid @wow-button-bottom-border-color;
+	border-top-color: @wow-button-top-border-color;
+}
+
+.wow-button {
+	.wow-button-background;
+	.wow-button-borders;
+	border-radius: 2px;
+	color: @wow-link-color;
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+	.wow-sans-serif;
+
+	&:hover {
+		.wow-button-background-hover;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	&:active {
+		.wow-button-background-active;
+		text-decoration: none;
+	}
+}
+
+.wow-input {
+	background: @wow-border-color;
+	border: 1px solid @wow-border-color+#111;
+	border-radius: 2px;
+
+	&:focus {
+		border: 1px solid @wow-link-color;
+		box-shadow: 0 0 5px @soft-shadow;
+	}
+}
+
+.inline-block{
+	display: inline-block;
+}
+
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: @wow-background-color + #111;
+}
+
+a {
+	color: @wow-link-color;
+	&:hover {
+		color: white;
+	}
+}
+
+h1, h2, h3, h4, h5{
+	color: @wow-link-color;
+	.wow-serif;
+}
+
+.container-flex {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: 100%;
+
+	form {
+		.wow-sans-serif;
+		border-radius: 5px;
+		background: @wow-background-color;
+		box-shadow: 0 0 5px black;
+		max-width: 450px;
+
+		legend {
+			color: @wow-link-color;
+			padding: 5px;
+			width: 100%;
+			.wow-button-background;
+			.wow-button-borders;
+			border-radius: 3px 3px 0 0;
+		}
+		fieldset {
+			border: 1px solid @wow-button-bottom-border-color;
+			border-top: none;
+			color: @wow-light-color;
+			margin: 0;
+
+			label {
+				color: @wow-light-color;
+			}
+			input {
+				.wow-input;
+				color: @wow-light-color;
+			}
+
+			label, input {
+				padding: 10px;
+				display: inline-block;
+				width: 50%;
+			}
+
+			button, a.button {
+				.wow-button;
+				display: inline-block;
+				width: 50%;
+			}
+
+			.error {
+				background: @wow-button-background-start-color;
+				border: 1px solid @wow-link-color;
+				color: @wow-link-color;
+				border-radius: 3px;
+				padding: 15px;
+			}
+
+			.help {
+				font-size: 10pt;
+			}
+		}
+	}
+}
+
+.steps section {
+	.wow-sans-serif;
+	border-radius: 5px;
+	background: @wow-background-color;
+	border: 1px solid @wow-button-bottom-border-color;
+	box-shadow: 0 0 5px black;
+	max-width: 450px;
+	padding-top:0;
+	text-align: center;
+
+	h1{
+		margin-top:0;
+		color:@wow-link-color;
+		.wow-button-background;
+		padding:10px;
+		font-weight: normal;
+		border:none;
+		border-bottom: 1px solid @wow-border-color;
+		border-radius: 2px 2px 0 0;
+		text-shadow: 0px -1px 0 black;
+	}
+
+	p{
+		margin:25px;
+		color:white;
+	}
+
+	input:not([type=submit]):not([type=file]) {
+		.wow-input;
+		padding: 10px;
+		color: @wow-light-color;
+	}
+
+	input[type="submit"], button{
+		.wow-button;
+		margin: 10px 10px 30px 10px;
+		position:relative;
+
+		img{
+			width:45px;
+			height:45px;
+			position:absolute;
+			left:5px;
+			top:5px;
+			border:1px solid @wow-link-color;
+		}
+
+		&.icon{
+			padding: 10px 10px 10px 65px;
+
+		}
+
+		&.icon:hover{
+			img{
+				filter: brightness(120%);
+			}
+		}
+
+		&.icon:active {
+			img {
+				filter: brightness(70%);
+			}
+		}
+	}
+}
+
+.steps-indicator{
+	display:none;
+}
+
+.wow-link-color{
+	color: @wow-link-color;
+}
+
+.drop-box {
+	width: 100%;
+	height: 50px;
+	color: @wow-link-color;
+	padding: 20px;
+	text-align: center;
+}
+
+.nav-tabs{
+
+	border-bottom: 1px solid @wow-button-bottom-border-color;
+
+	li{
+		a {
+			.wow-button;
+
+			&:hover {
+				.wow-button;
+				color: white;
+			}
+		}
+		&.active {
+			a {
+				.wow-button-background-active;
+				.wow-button-borders;
+				color:white;
+
+				&:hover{
+					.wow-button-background-active;
+					.wow-button-borders;
+					color: white;
+					cursor: default;
+				}
+			}
+		}
+	}
+}
+
+.tab-content{
+	width: 100%;
+	background: @wow-background-color;
+	border: 1px solid @wow-button-top-border-color;
+	border-top: none;
+	padding: 30px 10px;
+}
+
+.search{
+	padding:20px;
+	input{
+		.wow-input;
+		width: 100%;
+		color: @wow-link-color;
+		padding:10px;
+	}
+}
+
+.locale{
+	color: @wow-link-color;
+	word-wrap: break-word;
+
+	div{
+		margin:10px 0;
+	}
+
+	.editable{
+		.wow-input;
+	}
+}
+
+.pagination{
+	margin:30px;
+	li{
+		&.disabled{
+			a{
+				border-color: @wow-border-color;
+
+				&:hover{
+					border-color: @wow-border-color;
+				}
+			}
+		}
+		&.active{
+			a{
+				border-color: @wow-link-color;
+
+				&:hover{
+					border-color: white;
+				}
+			}
+		}
+		a{
+			.wow-button;
+
+			&:hover{
+				border-color: @wow-link-color;
+				color: white;
+			}
+		}
+	}
+}
+
+.spinner {
+	margin: 20px auto;
+	width: 70px;
+	text-align: center;
+}
+
+.spinner > div {
+	width: 18px;
+	height: 18px;
+	background-color: #333;
+
+	border-radius: 100%;
+	display: inline-block;
+	-webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+	animation: bouncedelay 1.4s infinite ease-in-out;
+	/* Prevent first frame from flickering when animation starts */
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.spinner .bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+	0%, 80%, 100% {
+		-webkit-transform: scale(0.0)
+	}
+	40% {
+		-webkit-transform: scale(1.0)
+	}
+}
+
+@keyframes bouncedelay {
+	0%, 80%, 100% {
+		transform: scale(0.0);
+		-webkit-transform: scale(0.0);
+	}
+	40% {
+		transform: scale(1.0);
+		-webkit-transform: scale(1.0);
+	}
+}

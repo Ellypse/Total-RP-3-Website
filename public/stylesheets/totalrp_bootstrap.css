@@ -17,6 +17,15 @@
   font-weight: 400;
   src: local('Lora'), local('Lora-Regular'), url('/fonts/lora.ttf') format('truetype');
 }
+.wow-serif {
+  font-family: 'Lora', serif;
+}
+.wow-sans-serif {
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+}
 /************************
 * COLORS
 *************************/
@@ -30,20 +39,23 @@
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 }
 .battleblue {
-  color: #0072a8;
+  color: #0072A8;
 }
 .wow-button-background {
+  background: -webkit-linear-gradient(90deg, #721500, #440402);
   background: linear-gradient(0deg, #721500, #440402);
 }
 .wow-button-background-hover {
+  background: -webkit-linear-gradient(90deg, #832611, #551513);
   background: linear-gradient(0deg, #832611, #551513);
 }
 .wow-button-background-active {
+  background: -webkit-linear-gradient(90deg, #610400, #330000);
   background: linear-gradient(0deg, #610400, #330000);
 }
 .wow-button-borders {
-  border: 1px solid #a01e00;
-  border-top-color: #a01e00;
+  border: 1px solid #A01E00;
+  border-top-color: #A01E00;
 }
 /***************
 * WIDGET STYLES
@@ -71,9 +83,10 @@ body {
 }
 button,
 .wow-button {
+  background: -webkit-linear-gradient(90deg, #721500, #440402);
   background: linear-gradient(0deg, #721500, #440402);
-  border: 1px solid #a01e00;
-  border-top-color: #a01e00;
+  border: 1px solid #A01E00;
+  border-top-color: #A01E00;
   border-radius: 2px;
   color: #ffb100;
   padding: 5px 10px 5px 10px;
@@ -81,12 +94,14 @@ button,
 }
 button:hover,
 .wow-button:hover {
+  background: -webkit-linear-gradient(90deg, #832611, #551513);
   background: linear-gradient(0deg, #832611, #551513);
   text-decoration: none;
   cursor: pointer;
 }
 button:active,
 .wow-button:active {
+  background: -webkit-linear-gradient(90deg, #610400, #330000);
   background: linear-gradient(0deg, #610400, #330000);
   text-decoration: none;
 }
@@ -114,7 +129,7 @@ h5 {
   color: #ffb100;
 }
 section {
-  background: #1b0e07;
+  background: #1B0E07;
   border: 1px solid #281812;
   border-radius: 2px;
 }

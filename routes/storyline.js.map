@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "storyline.js",
+  "sourceRoot": "",
+  "sources": [
+    "storyline.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA;;EAAA,MAAA,GAAS,OAAA,CAAQ,SAAR,CACR,CAAC,MADO,CAAA;;EAIT,MAAM,CAAC,GAAP,CAAW,GAAX,EAAgB,SAAC,GAAD,EAAM,GAAN;WACf,GAAG,CAAC,MAAJ,CAAW,qBAAX;EADe,CAAhB;;EAIA,MAAM,CAAC,OAAP,GAAiB;AARjB"
+}

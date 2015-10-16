@@ -13,6 +13,15 @@ Custom style used for the wiki
   font-weight: 400;
   src: local('Lora'), local('Lora-Regular'), url('/fonts/lora.ttf') format('truetype');
 }
+.wow-serif {
+  font-family: 'Lora', serif;
+}
+.wow-sans-serif {
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+}
 ::-moz-selection {
   background: #446779;
   color: white;
@@ -56,8 +65,8 @@ body {
 .battlenet {
   background-color: black;
   border-radius: 3px;
-  border: 1px solid #0072a8;
-  color: #0072a8 !important;
+  border: 1px solid #0072A8;
+  color: #0072A8 !important;
   padding: 10px;
   margin-top: 10px;
 }
@@ -67,7 +76,7 @@ body {
   margin-right: 15px;
 }
 .battlenet:hover {
-  background-color: #0072a8;
+  background-color: #0072A8;
   border-color: black;
   color: black !important;
 }
@@ -85,7 +94,7 @@ body {
   display: inline-block;
 }
 .battletag {
-  color: #0072a8;
+  color: #0072A8;
 }
 .logo {
   position: relative;

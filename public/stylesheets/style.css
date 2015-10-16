@@ -10,6 +10,15 @@
   font-weight: 400;
   src: local('Lora'), local('Lora-Regular'), url('/fonts/lora.ttf') format('truetype');
 }
+.wow-serif {
+  font-family: 'Lora', serif;
+}
+.wow-sans-serif {
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+}
 * {
   font-family: arial, sans-serif;
 }
@@ -26,10 +35,19 @@ body {
 }
 body .title {
   width: 512px;
+  height: 256px;
   margin: 0 auto 20px auto;
-  max-width: 100%;
   z-index: 1;
   position: relative;
+  background: url("");
+  background-image: url('/images/logo.png');
+  background-size: 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  body .title {
+    background-image: url("/images/logo@2x.png");
+    background-size: 100% auto;
+  }
 }
 body .buttons {
   width: 300px;
@@ -53,7 +71,13 @@ body .buttons .button::before {
   width: 314px;
   height: 90px;
   z-index: -1;
-  background: url("/images/achievement_button.png") no-repeat;
+  background-image: url("/images/achievement_button.png");
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  body .buttons .button::before {
+    background-image: url("/images/achievement_button@2x.png");
+    background-size: 100% auto;
+  }
 }
 body .buttons .button a {
   position: absolute;
@@ -67,7 +91,7 @@ body .buttons .button a {
   font-family: 'Lora', serif;
   text-decoration: none;
   text-align: center;
-  color: #ffd51b;
+  color: #FFD51B;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
   cursor: pointer;
 }
@@ -89,11 +113,71 @@ body .buttons .button a .icon {
 }
 body .buttons .button a .icon::after {
   content: "";
-  background: url("/images/icons/border.png") 100% no-repeat;
+  background-image: url("/images/icons/border.png");
   top: -2px;
   bottom: -2px;
   left: -2px;
   right: -2px;
   position: absolute;
   background-size: 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  body .buttons .button a .icon::after {
+    background-image: url("/images/icons/border@2x.png");
+    background-size: 100% auto;
+  }
+}
+body .buttons .button a .icon.crate {
+  background-image: url("/images/icons/crate.png");
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  body .buttons .button a .icon.crate {
+    background-image: url("/images/icons/crate@2x.png");
+    background-size: 100% auto;
+  }
+}
+body .buttons .button a .icon.wiki {
+  background-image: url("/images/trp3_wiki.png");
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  body .buttons .button a .icon.wiki {
+    background-image: url("/images/trp3_wiki@2x.png");
+    background-size: 100% auto;
+  }
+}
+body .buttons .button a .icon.forum {
+  background-image: url("/images/icons/people.png");
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  body .buttons .button a .icon.forum {
+    background-image: url("/images/icons/people@2x.png");
+    background-size: 100% auto;
+  }
+}
+body .buttons .button a .icon.localization {
+  background-image: url("/images/icons/friends.png");
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  body .buttons .button a .icon.localization {
+    background-image: url("/images/icons/friends@2x.png");
+    background-size: 100% auto;
+  }
+}
+body .buttons .button a .icon.ellypse {
+  background-image: url("/images/icons/ellypse.png");
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  body .buttons .button a .icon.ellypse {
+    background-image: url("/images/icons/ellypse@2x.png");
+    background-size: 100% auto;
+  }
+}
+body .buttons .button a .icon.telko {
+  background-image: url("/images/icons/telko.png");
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  body .buttons .button a .icon.telko {
+    background-image: url("/images/icons/telko@2x.png");
+    background-size: 100% auto;
+  }
 }

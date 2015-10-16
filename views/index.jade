@@ -7,32 +7,37 @@ block css
     link(rel='stylesheet', href='/stylesheets/style.css')
     style.
         body{
-            background-image: url("images/backgrounds/#{background}");
+            background-image: url("images/backgrounds/#{background}.png");
+        }
+
+        @media all and (-webkit-min-device-pixel-ratio: 1.5) {
+            body{
+                background-image: url("images/backgrounds/#{background}@2x.png");
+            }
         }
 
 block content
     .title
-        img.title(src='images/logo.png')
     .buttons
         .button
-            a(href='http://curse.totalrp3.info', target='blank')= "Download on Curse"
-                .icon(style='background-image: url("images/icons/crate.jpg")')
+            a(href='http://curse.totalrp3.info', target='_blank')= "Download on Curse"
+                .icon.crate
         .button
             a(href='/wiki')= "Knowledge base"
-                .icon(style='background-image: url("images/trp3_wiki.gif")')
+                .icon.wiki
         .button
-            a(href='http://forums.telkostrasz.be', target='blank')= "Forum"
-                .icon(style='background-image: url("images/icons/people.jpg")')
+            a(href='http://forums.telkostrasz.be', target='_blank')= "Forum"
+                .icon.forum
         .button
-            a(href='/localization')= "Help localizing TRP 3"
-                .icon(style='background-image: url("images/icons/friends.jpg")')
+            a(href='http://loc.totalrp3.info', target='_blank')= "Help localizing TRP 3"
+                .icon.localization
     .buttons
         .button
-            a(href='http://twitter.com/EllypseCelwe', target='blank')= "Follow @Ellypse"
-                .icon(style='background-image: url("images/icons/ellypse.jpg")')
+            a(href='http://twitter.com/EllypseCelwe', target='_blank')= "Follow @Ellypse"
+                .icon.ellypse
         .button
-            a(href='http://twitter.com/Telkostrasz', target='blank')= "Follow @Telkostrasz"
-                .icon(style='background-image: url("images/icons/telko.jpg")')
+            a(href='http://twitter.com/Telkostrasz', target='_blank')= "Follow @Telkostrasz"
+                .icon.telko
 
     script(src="//static.getclicky.com/js", type="text/javascript")
     script(type="text/javascript").

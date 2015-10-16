@@ -10,3 +10,12 @@
   font-weight: 400;
   src: local('Lora'), local('Lora-Regular'), url('/fonts/lora.ttf') format('truetype');
 }
+.wow-serif {
+  font-family: 'Lora', serif;
+}
+.wow-sans-serif {
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+}

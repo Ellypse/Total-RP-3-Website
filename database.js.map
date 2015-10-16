@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "database.js",
+  "sourceRoot": "",
+  "sources": [
+    "database.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA;;EAAA,QAAA,GAAW,OAAA,CAAQ,UAAR;;EAEX,MAAM,CAAC,OAAP,GAAiB,QAAQ,CAAC,OAAT,CAAiB,8BAAjB;AAFjB"
+}
