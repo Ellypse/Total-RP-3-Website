@@ -29,7 +29,7 @@ router.get('/*', function (req, res, next) {
 		if (requestedPage === '/index') {
 			return res.render('wiki/home.jade', {
 				config: config,
-				pages: pageList,
+				pages: raneto.getPages(''),
 				body_class: 'page-home',
 				username: "TEST"
 			});

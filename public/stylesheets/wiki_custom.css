@@ -100,14 +100,23 @@ body {
   position: relative;
   padding: 10px 0 10px 50px;
 }
-.logo img {
+.logo::before {
+  content: "";
+  width: 40px;
+  height: 40px;
   position: absolute;
-  top: 0;
   left: 0;
-  width: 42px;
-  height: 42px;
+  top: 0;
+  background-image: url("/images/icons/trp3_wiki.png");
+  background-size: 100%;
 }
-.logo:hover img {
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  .logo::before {
+    background-image: url("/images/icons/trp3_wiki@2x.png");
+    background-size: 100% auto;
+  }
+}
+.logo:hover {
   -webkit-filter: brightness(150%);
           filter: brightness(150%);
 }
