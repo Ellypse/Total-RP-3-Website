@@ -1,0 +1,40 @@
+extends layout
+
+block content
+    #sidebar.col-sm-3
+        include sidebar
+    .col-sm-9
+        section.content
+            button#toggle-raw.btn.btn-default.btn-sm(alt="Show the markdown version of this page.")= "Show raw content"
+            if meta.title
+                h1.title= meta.title
+            #content
+                | !{content}
+            #raw-content(style="display:none")
+                pre
+                    code.markdown= markdownContent
+            .page-meta.clearfix
+                .last-updated.pull-right= "Last updated on " + last_modified
+            hr
+            #livefyre-comments
+            script(type="text/javascript", src="/libs/livefyre/livefyre.js")
+            script.
+                (function () {
+                    fyre.conv.load({}, [{
+                        el: 'livefyre-comments',
+                        network: "livefyre.com",
+                        siteId: "374621",
+                        articleId: "#{meta.title}",
+                        signed: false,
+                        collectionMeta: {
+                            articleId: "#{meta.title}",
+                            url: fyre.conv.load.makeCollectionUrl()
+                        }
+                    }], function() {});
+                }());
+    script.
+        $("#toggle-raw").click(function(){
+            $("#toggle-raw").toggleClass("active");
+            $("#content").toggle();
+            $("#raw-content").toggle();
+        });

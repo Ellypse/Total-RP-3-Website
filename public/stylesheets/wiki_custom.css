@@ -1,0 +1,178 @@
+/*
+Custom style used for the wiki
+*/
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fira Sans'), local('FiraSans-Regular'), url('/fonts/fira_sans.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lora'), local('Lora-Regular'), url('/fonts/lora.ttf') format('truetype');
+}
+.wow-serif {
+  font-family: 'Lora', serif;
+}
+.wow-sans-serif {
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+}
+::-moz-selection {
+  background: #446779;
+  color: white;
+  text-shadow: 0 -1px 0 black;
+}
+::selection {
+  background: #446779;
+  color: white;
+  text-shadow: 0 -1px 0 black;
+}
+body {
+  text-rendering: optimizeLegibility;
+  /* optional: for older browsers */
+  -webkit-font-variant-ligatures: common-ligatures;
+  /* for iOS and Safari 6 */
+  font-variant-ligatures: common-ligatures;
+  /* for up-to-date browsers, including IE10 and Opera 21 */
+  /* pre-Firefox 14+ */
+  -webkit-font-feature-settings: "kern";
+  /* Firefox 14+ */
+  font-feature-settings: "kern";
+  /* standard */
+  -webkit-font-kerning: normal;
+          font-kerning: normal;
+  /* Safari 7+, Firefox 24+, Chrome 33(?)+, Opera 21+*/
+  -webkit-font-smoothing: subpixel-antialiased;
+  -ms-font-feature-settings: "liga", "dlig";
+  -webkit-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+  font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+}
+.content {
+  border-radius: 2px;
+  border-color: grey;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+* {
+  box-sizing: border-box;
+}
+.battlenet {
+  background-color: black;
+  border-radius: 3px;
+  border: 1px solid #0072A8;
+  color: #0072A8 !important;
+  padding: 10px;
+  margin-top: 10px;
+}
+.battlenet img {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+}
+.battlenet:hover {
+  background-color: #0072A8;
+  border-color: black;
+  color: black !important;
+}
+.battlenet:hover img {
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
+}
+.fyre .fyre-box-wrapper .fyre-logo-drop {
+  left: 2px !important;
+}
+.fyre .fyre-box-wrapper a.fyre-user-profile-link {
+  padding: 0;
+}
+.fyre .fyre-box-wrapper img {
+  display: inline-block;
+}
+.battletag {
+  color: #0072A8;
+}
+.logo {
+  position: relative;
+  padding: 10px 0 10px 50px;
+}
+.logo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 42px;
+}
+.logo:hover img {
+  -webkit-filter: brightness(150%);
+          filter: brightness(150%);
+}
+.home-categories .panel .page {
+  text-overflow: inherit;
+  white-space: normal;
+}
+#toggle-raw {
+  float: right;
+  border-color: grey;
+}
+.hljs-comment,
+.markdown .hljs-code {
+  color: #F1B55E;
+}
+.hljs-keyword,
+.hljs-strong,
+.hljs-tag,
+.hljs-tag .hljs-title {
+  color: #f67469;
+}
+.hljs-attribute,
+.hljs-value,
+.hljs-function,
+.hljs-link_label {
+  color: #c4a8db;
+}
+.col {
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  #sidebar {
+    display: none;
+  }
+  .home-search.jumbotron.row {
+    display: none;
+  }
+  .container-fluid {
+    margin-top: 10px;
+    padding: 0;
+  }
+  .container-fluid .col-sm-9 {
+    margin: 0;
+    padding: 0;
+  }
+  .container-fluid .col-sm-9 .content {
+    margin: 0 0 20px 0;
+    padding: 15px;
+    border-radius: 0;
+    border: none;
+  }
+  .container-fluid .col-sm-9 .content.search {
+    padding: 30px;
+  }
+  .col {
+    width: 100%;
+  }
+  header {
+    overflow: hidden;
+  }
+  header .row div {
+    margin-bottom: 20px;
+  }
+  .battlenet,
+  #toggle-raw {
+    display: none;
+  }
+}

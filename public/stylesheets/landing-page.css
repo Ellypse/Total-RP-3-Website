@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fira Sans'), local('FiraSans-Regular'), url('/fonts/fira_sans.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lora'), local('Lora-Regular'), url('/fonts/lora.ttf') format('truetype');
+}
+.wow-serif {
+  font-family: 'Lora', serif;
+}
+.wow-sans-serif {
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+}
+* {
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+}
+body {
+  background: no-repeat fixed center;
+  background-size: cover;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+body .title {
+  width: 512px;
+  height: 256px;
+  margin: 0 auto 20px auto;
+  z-index: 1;
+  position: relative;
+  background: url("");
+  background-image: url('/images/logo.png');
+  background-size: 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  body .title {
+    background-image: url("/images/logo@2x.png");
+    background-size: 100% auto;
+  }
+}
+body .buttons {
+  width: 300px;
+  margin: 0 auto 80px auto;
+  z-index: 1;
+  position: relative;
+}
+body .buttons .button {
+  width: 298px;
+  height: 60px;
+  padding-top: 20px;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  transition: all .1s linear;
+}
+body .buttons .button::before {
+  content: " ";
+  position: absolute;
+  top: -17px;
+  left: -7px;
+  width: 314px;
+  height: 90px;
+  z-index: -1;
+  background-image: url("/images/achievement_button.png");
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  body .buttons .button::before {
+    background-image: url("/images/achievement_button@2x.png");
+    background-size: 100% auto;
+  }
+}
+body .buttons .button a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  line-height: 52px;
+  font-size: 10pt;
+  font-weight: bold;
+  font-family: 'Lora', serif;
+  text-decoration: none;
+  text-align: center;
+  color: #FFD51B;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  transition: all .1s linear;
+}
+body .buttons .button a.twitter {
+  color: #55ACEE;
+}
+body .buttons .button a .icon {
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  width: 41px;
+  height: 41px;
+  border-radius: 4px;
+  background-size: 100%;
+  transition: all .1s linear;
+}
+body .buttons .button a .icon::after {
+  content: "";
+  background-image: url("/images/icons/border.png");
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  position: absolute;
+  background-size: 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  body .buttons .button a .icon::after {
+    background-image: url("/images/icons/border@2x.png");
+    background-size: 100% auto;
+  }
+}
+body .buttons .button a .icon.crate {
+  background-image: url("/images/icons/crate.png");
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  body .buttons .button a .icon.crate {
+    background-image: url("/images/icons/crate@2x.png");
+    background-size: 100% auto;
+  }
+}
+body .buttons .button a .icon.wiki {
+  background-image: url("/images/icons/trp3_wiki.png");
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  body .buttons .button a .icon.wiki {
+    background-image: url("/images/icons/trp3_wiki@2x.png");
+    background-size: 100% auto;
+  }
+}
+body .buttons .button a .icon.forum {
+  background-image: url("/images/icons/people.png");
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  body .buttons .button a .icon.forum {
+    background-image: url("/images/icons/people@2x.png");
+    background-size: 100% auto;
+  }
+}
+body .buttons .button a .icon.localization {
+  background-image: url("/images/icons/friends.png");
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  body .buttons .button a .icon.localization {
+    background-image: url("/images/icons/friends@2x.png");
+    background-size: 100% auto;
+  }
+}
+body .buttons .button a .icon.ellypse {
+  background-image: url("//twitter.com/EllypseCelwe/profile_image?size=normal");
+  background-size: 100%;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  body .buttons .button a .icon.ellypse {
+    background-image: url("//twitter.com/EllypseCelwe/profile_image?size=bigger");
+  }
+}
+body .buttons .button a .icon.telko {
+  background-image: url("//twitter.com/Telkostrasz/profile_image?size=normal");
+  background-size: 100%;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  body .buttons .button a .icon.telko {
+    background-image: url("//twitter.com/Telkostrasz/profile_image?size=bigger");
+  }
+}
+body .buttons .button:hover {
+  -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.9));
+          filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.9));
+}
+body .buttons .button:hover a {
+  color: white;
+}
+body .buttons .button:hover a .icon {
+  -webkit-filter: brightness(150%);
+          filter: brightness(150%);
+}

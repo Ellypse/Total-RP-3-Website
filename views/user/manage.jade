@@ -1,0 +1,49 @@
+doctype html
+head
+	link(rel="stylesheet", href="/libs/bootstrap/dist/css/bootstrap.min.css")
+	link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css")
+	script(src="/libs/angular/angular.min.js")
+	script(src="/libs/angularUtils-pagination/dirPagination.js")
+	script(src="/javascripts/user-management.js")
+body(ng-app="totalrp", ng-controller="userManagementCtrl")
+	nav.navbar.navbar-default
+		.container-fluid
+			button(type="button", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1", aria-expanded="false").navbar-toggle.collapsed
+				span.sr-only Toggle navigation
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+			a.navbar-brand User management
+			.collapse.navbar-collapse#bs-example-navbar-collapse-1
+				ul.nav.navbar-nav.navbar-right
+					li
+						a You are logged in as #{user.username}
+
+	.container-fluid
+		.row
+			.col-sm-6
+				h1 {{users.length}} user(s)
+			.col-sm-6
+				.input-group
+					input.form-control(type="text", ng-model="search.text", placeholder="Search")
+					span.input-group-addon
+						i.fa.fa-search
+				dir-pagination-controls
+		.col-sm-6.col-md-4.col-lg-3(dir-paginate="user in users | filter : search.text | itemsPerPage : 12")
+			h3 {{user.username}}
+			p
+				small.battlenet {{user.battlenet.battletag}}
+			p.
+				Created on {{user.created | date : 'yyyy/MM/dd'}}
+			p.
+				Email address: {{user.email}}
+			p
+				input(type="checkbox", ng-model="user.isAdmin", ng-attr-id="adminRights{{user._id}}", ng-change="setUserAdmin(user)")
+				label(ng-attr-for="adminRights{{user._id}}") Admin rights
+			.btn-group
+				button.btn.btn-default(ng-click="deleteUser(user)")
+					i.fa.fa-trash-o
+				button.btn.btn-default
+					i.fa.fa-envelope-o
+				button.btn.btn-default
+					i.fa.fa-dot-circle-o

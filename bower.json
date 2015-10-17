@@ -1,0 +1,27 @@
+{
+  "name": "Total_RP",
+  "version": "1.0.0",
+  "authors": [
+    "Renaud Parize <renaud@parize.me>"
+  ],
+  "description": "Total RP & co. website",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "highlightjs": "~8.8.0",
+    "jquery.fitvids": "fitvids#~1.1.0",
+    "masonry": "~3.3.2",
+    "angular": "~1.4.7",
+    "angular-wizard": "~0.5.5"
+  }
+}
