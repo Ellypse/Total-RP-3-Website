@@ -22,6 +22,7 @@
     "jquery.fitvids": "fitvids#~1.1.0",
     "masonry": "~3.3.2",
     "angular": "~1.4.7",
-    "angular-wizard": "~0.5.5"
+    "angular-wizard": "~0.5.5",
+    "angular-bootstrap": "~0.14.2"
   }
 }
