@@ -1,54 +1,67 @@
 doctype html
 html
-    head
-        meta(charset='utf-8')
-        meta(http-equiv="X-UA-Compatible" content="IE=edge")
-        meta(name='viewport', content = 'width=device-width, initial-scale=1')
-        if meta
-            meta(name="description" content=meta.description)
-            title= meta.title + '-' + config.site_title
-            meta(name="twitter:card", content="summary")
-            meta(name="twitter:site", content="@totalrp3")
-            meta(name="twitter:title", content="Total RP 3 Documentation - "+meta.title)
-            meta(name="twitter:description", content=meta.description)
-            meta(property="og:title", content=meta.title)
-            meta(property="og:description", content=meta.description)
-        else
-            title= config.site_title
-        meta(property="og:site_name", content=config.site_title)
-        meta(property="article:author", content="https://www.facebook.com/pages/Total-RP-3/170199479668355")
-        meta(property="article:publisher", content="https://www.facebook.com/pages/Total-RP-3/170199479668355")
-        link(rel='icon', href="/favicon.png")
-        link(rel='stylesheet', href='/libs/bootstrap/dist/css/bootstrap.min.css')
-        link(rel='stylesheet', href='/libs/highlightjs/styles/monokai.css')
-        link(rel='stylesheet', href='/libs/raneto/raneto.css')
-        link(rel='stylesheet', href='/stylesheets/wiki_custom.css')
-        if meta
+	head
+		meta(charset='utf-8')
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name='viewport', content = 'width=device-width, initial-scale=1')
+		if meta
+			meta(name="description" content=meta.description)
+			title= meta.title + ' – ' + config.site_title
+			meta(name="twitter:card", content="summary")
+			meta(name="twitter:site", content="@totalrp3")
+			meta(name="twitter:title", content="Total RP 3 Documentation – " + meta.title)
+			meta(name="twitter:description", content=meta.description)
+			meta(property="og:title", content=meta.title)
+			meta(property="og:description", content=meta.description)
+		else
+			title= config.site_title
+		meta(property="og:site_name", content=config.site_title)
+		meta(property="article:author", content="https://www.facebook.com/pages/Total-RP-3/170199479668355")
+		meta(property="article:publisher", content="https://www.facebook.com/pages/Total-RP-3/170199479668355")
+		link(rel='icon', href="/favicon.png")
+		link(rel='stylesheet', href='/libs/bootstrap/dist/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/libs/highlightjs/styles/monokai.css')
+		link(rel='stylesheet', href='/libs/bigfoot-default.css')
+		link(rel='stylesheet', href='/libs/raneto/raneto.css')
+		link(rel='stylesheet', href='/stylesheets/wiki_custom.css')
+		if meta
 
-        script(src='/libs/jquery/dist/jquery.min.js')
-        script(src='/libs/bootstrap/dist/js/bootstrap.min.js')
-        script(src='/libs/highlightjs/highlight.pack.js')
-        script(src='/libs/jquery.fitvids/jquery.fitvids.js')
-        script(src='/libs/masonry/dist/masonry.pkgd.min.js')
-    body
-        header.header
-            .container-fluid
-                .row
-                    .col-sm-6
-                        a.logo(href="#{config.base_url}")
-                            = config.site_title
-                    .col-sm-6
-                        form.search-form.form-inline.pull-right(role="form" action="/wiki/")
-                            .form-group
-                                label.sr-only(for="search")= "Search"
-                                .input-group
-                                    input#search.form-control(type="search", name="search", size="30", value=search, placeholder="Search")
-                                    span.input-group-btn
-                                        button.btn.btn-primary(type='submit') Search
-        .container-fluid
-            block content
-        footer.footer
-                p.copyright.pull-right!= config.copyright
-                p.copyright.pull-right= "Logos for Total RP 3 are designed by "
-                    a(href="http://quentincharton.fr/", target="_blank") Quentin Charton.
-        script(src='/libs/raneto/raneto.js')
+		script(src='/libs/jquery/dist/jquery.min.js')
+		//
+			script(src='https://bramp.github.io/js-sequence-diagrams/js/raphael-min.js')
+			script(src='https://bramp.github.io/js-sequence-diagrams/js/underscore-min.js')
+			script(src='https://bramp.github.io/js-sequence-diagrams/js/sequence-diagram-min.js')
+			script(src="https://adrai.github.io/flowchart.js/flowchart-latest.js")
+
+		script(src='/libs/bootstrap/dist/js/bootstrap.min.js')
+		script(src='/libs/highlightjs/highlight.pack.js')
+		script(src='/libs/jquery.fitvids/jquery.fitvids.js')
+		script(src='/libs/masonry/dist/masonry.pkgd.min.js')
+	body
+		header.header
+			.container-fluid
+				.row
+					.col-sm-6
+						a.logo(href="#{config.base_url}")
+							= config.site_title
+					.col-sm-6
+						form.search-form.form-inline.pull-right(role="form" action="/wiki/")
+							.form-group
+								label.sr-only(for="search")= "Search"
+								.input-group
+									input#search.form-control(type="search", name="search", size="30", value=search, placeholder="Search")
+									span.input-group-btn
+										button.btn.btn-primary(type='submit') Search
+		.container-fluid
+			block content
+		footer.footer
+			p.copyright.pull-right!= config.copyright
+			p.copyright.pull-right= "Logos for Total RP 3 are designed by "
+			a(href="http://quentincharton.fr/", target="_blank") Quentin Charton.
+		script(src='/libs/raneto/raneto.js')
+		script(src='/libs/jquery.flowchart.min.js')
+		script(src='/libs/bigfoot.min.js')
+		script.
+			$(".language-sequence").sequenceDiagram({theme: 'simple'}).css('backgroundColor', 'white').parent().css('backgroundColor', 'white');
+			$(".language-flow").flowChart().css('backgroundColor', 'white').parent().css('backgroundColor', 'white');
+			$.bigfoot();

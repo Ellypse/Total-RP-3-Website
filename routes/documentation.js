@@ -6,7 +6,9 @@ var express = require('express'),
 	moment = require('moment'),
 	marked = require('marked'),
 	validator = require('validator'),
-	debug = require("debug")("wiki");
+	debug = require("debug")("wiki"),
+	md = require('markdown-it')()
+		.use(require('markdown-it-footnote'));
 
 var raneto = require('../controllers/raneto-custom/index'),
 	config = require("../config/raneto");
@@ -56,7 +58,7 @@ router.get('/*', function (req, res, next) {
 					meta.title = raneto.slugToTitle(filePath);
 				}
 				var markdownContent = raneto.processVars(content);
-				var html = marked(markdownContent);
+				var html = md.render(markdownContent);
 				meta.description = html.replace(/<(?:.|\n)*?>/gm, '').substring(0, 250);
 				meta.description += "…";
 				res.render('./wiki/page.jade', {
