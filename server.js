@@ -14,25 +14,26 @@ var fs = require('fs');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '3005');
+var securedPort = normalizePort(process.env.PORT || '3006');
 app.set('port', port);
 
-var isDebug = process.env['DEBUG'] != null;
 
 /**
  * SSL options (certificate and private key)
  * @type {{key, cert}}
  */
-var options = isDebug ? {
+var options = {
 	key: fs.readFileSync('./ssl/totalrp3.key'),
 	cert: fs.readFileSync('./ssl/totalrp3.crt')
-} : {};
+};
 
 /**
  * Create HTTP server.
  */
 
-var server = isDebug ? https.createServer(options, app) : http.createServer(app);
+var server = http.createServer(app);
+var securedServer = https.createServer(options, app);
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -41,6 +42,9 @@ var server = isDebug ? https.createServer(options, app) : http.createServer(app)
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
+securedServer.listen(securedPort);
+securedServer.on('error', onError);
+securedServer.on('listening', onListening);
 
 /**
  * Normalize a port into a number, string, or false.
