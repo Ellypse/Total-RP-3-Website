@@ -7,7 +7,9 @@ var express = require('express'),
 	marked = require('marked'),
 	validator = require('validator'),
 	debug = require("debug")("wiki"),
-	md = require('markdown-it')()
+	md = require('markdown-it')({
+		html: true
+	})
 		.use(require('markdown-it-footnote'));
 
 var raneto = require('../controllers/raneto-custom/index'),
