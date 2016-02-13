@@ -10,7 +10,8 @@ var express = require('express'),
 	md = require('markdown-it')({
 		html: true
 	})
-		.use(require('markdown-it-footnote'));
+		.use(require('markdown-it-footnote'))
+		.use(require('markdown-it-anchor'));
 
 var raneto = require('../controllers/raneto-custom/index'),
 	config = require("../config/raneto");

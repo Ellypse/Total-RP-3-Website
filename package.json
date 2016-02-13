@@ -20,6 +20,7 @@
     "luaparse": "^0.2.0",
     "lunr": "^0.5.3",
     "markdown-it": "^6.0.0",
+    "markdown-it-anchor": "^2.4.0",
     "markdown-it-footnote": "^2.0.0",
     "marked": "^0.3.5",
     "moment": "^2.10.6",
