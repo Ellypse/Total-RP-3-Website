@@ -57,11 +57,13 @@ html
 		footer.footer
 			p.copyright.pull-right!= config.copyright
 			p.copyright.pull-right= "Logos for Total RP 3 are designed by "
-			a(href="http://quentincharton.fr/", target="_blank") Quentin Charton.
+				a(href="http://quentincharton.fr/", target="_blank") Quentin Charton.
 		script(src='/libs/raneto/raneto.js')
 		script(src='/libs/jquery.flowchart.min.js')
 		script(src='/libs/bigfoot.min.js')
 		script.
-			$(".language-sequence").sequenceDiagram({theme: 'simple'}).css('backgroundColor', 'white').parent().css('backgroundColor', 'white');
-			$(".language-flow").flowChart().css('backgroundColor', 'white').parent().css('backgroundColor', 'white');
-			$.bigfoot();
+			$(document).ready(function(){
+				//$(".language-sequence").sequenceDiagram({theme: 'simple'}).css('backgroundColor', 'white').parent().css('backgroundColor', 'white');
+				//$(".language-flow").flowChart().css('backgroundColor', 'white').parent().css('backgroundColor', 'white');
+				$.bigfoot();
+			});
