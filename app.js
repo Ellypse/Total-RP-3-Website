@@ -2,7 +2,6 @@ var express = require('express'),
 	path = require('path'),
 	favicon = require('serve-favicon'),
 	logger = require('morgan'),
-	cookieParser = require('cookie-parser'),
 	bodyParser = require('body-parser');
 
 var routesController = require('./controllers/routes-controller');
@@ -17,7 +16,6 @@ app.use(favicon(path.join(__dirname, 'public', 'favicon.png')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 

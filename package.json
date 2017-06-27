@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./server.js"
+    "start": "node ./server.js > /dev/null 2> ./errors.log &",
+    "debug": "node ./server.js"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
