@@ -1,0 +1,33 @@
+/*
+Title: Total RP 3 and incompatibilities the Legion expansion
+*/
+
+> _This article was our April fools' day joke for April 1st 2016. As far as we know, there is no issue with Demon Hunters and Total RP 3.
+
+Hello folks. We have had access to Legion's alpha for a couple of weeks thanks to our friends at [WoWInterface][Fishing Buddy] and now that we had some times fiddling with the changes in the game API in Legion we wanted to share some thoughts with you today.
+
+> **TL;DR:**
+> Total RP 3 will **not** be compatible with **Demon Hunters** in Legion due to **limitations** in the API **placed by Blizzard**. We strongly advise people who will want to use Total RP 3 in Legion to **not roll a Demon Hunter**.
+
+## What is the issue?
+
+We immediately started working on making Total RP 3 compatible with Legion so we can release an update on day one. Once the small bits have been fixed, we created Demon Hunter characters to test Total RP 3 with them. Telkostrasz and I were able to see each others profile and everything was working great.
+
+Until we left Mardum. Once out of the Demon Hunters starting area we tried with several combination of races, classes and factions in both [Orgrimmar][Old Crafty] and [Ironforge][Old Ironjaw] but **we were not able to see others profiles**. It seemed we can see other Demon Hunters profiles (we were actually able to see them **cross faction** this time! [Bloodelves][Drathen] Demon Hunters can see [Nightelves][Talaelar] Demon Hunters profiles!).
+
+If this issue is still here for the release of the expansion, **if you choose to play a Demon Hunters you will only be able to roleplay between Demon Hunters**.
+
+## The explanation
+
+We did some digging around the code and a lot of testing and it seems that **Blizzard has placed a limitation on Demon Hunters for Legion**. The **protocol** used for exchanging data (the Mary Sue Protocol, the xtensionxtooltip2 channel and the direct method of sending data via SendAddonMessage()) **is different** for Demon Hunters.
+
+A variable introduced inside Blizzard's code named `DEMONIC_INFLUENCE` seems to act as **a modifier for the messages exchanged**, even between add-ons. It's basically some kind of complex encryption, **but we don't have the key**.
+
+We have submitted [a ticket][Undelivered Love Letter] to Blizzard to inform them of the issue and have not received a response yet, but since it is clearly something they did by design they might just dismiss our ticket.
+
+[Fishing Buddy]: http://www.wowinterface.com/downloads/info4239-FishingBuddy.html
+[Old Crafty]: http://wowhead.com/achievement=1836
+[Old Ironjaw]: http://wowhead.com/achievement=1837
+[Drathen]: http://wowhead.com/npc=16780
+[Talaelar]: http://wowhead.com/npc=4221
+[Undelivered Love Letter]: http://wowhead.com/item=67386

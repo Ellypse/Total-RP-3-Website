@@ -5,6 +5,9 @@
 # Mac hidden files
 .DS_Store
 
+# Logs
+*.log
+
 # Node files
 node_modules
 npm-debug.log
@@ -13,5 +16,4 @@ npm-debug.log
 bower_components
 
 # Content uploaded via FTP
-content
 uploads
