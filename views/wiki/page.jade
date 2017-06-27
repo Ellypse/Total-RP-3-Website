@@ -16,22 +16,6 @@ block content
             .page-meta.clearfix
                 .last-updated.pull-right= "Last updated on " + last_modified
             hr
-            #livefyre-comments
-            script(type="text/javascript", src="/libs/livefyre/livefyre.js")
-            script.
-                (function () {
-                    fyre.conv.load({}, [{
-                        el: 'livefyre-comments',
-                        network: "livefyre.com",
-                        siteId: "374621",
-                        articleId: "#{meta.title}",
-                        signed: false,
-                        collectionMeta: {
-                            articleId: "#{meta.title}",
-                            url: fyre.conv.load.makeCollectionUrl()
-                        }
-                    }], function() {});
-                }());
     script.
         $("#toggle-raw").click(function(){
             $("#toggle-raw").toggleClass("active");

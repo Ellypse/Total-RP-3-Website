@@ -111,7 +111,7 @@
   display: none !important;
 }
 .battleblue {
-  color: #0072A8;
+  color: #0072a8;
 }
 .wow-button-background {
   background: linear-gradient(0deg, #721500, #440402);
@@ -123,15 +123,15 @@
   background: linear-gradient(0deg, #610400, #330000);
 }
 .wow-button-borders {
-  border: 1px solid #A01E00;
-  border-top-color: #A01E00;
+  border: 1px solid #a01e00;
+  border-top-color: #a01e00;
 }
 .wow-button {
   background: linear-gradient(0deg, #721500, #440402);
-  border: 1px solid #A01E00;
-  border-top-color: #A01E00;
+  border: 1px solid #a01e00;
+  border-top-color: #a01e00;
   border-radius: 2px;
-  color: #FFB100;
+  color: #ffb100;
   padding: 5px 10px 5px 10px;
   text-decoration: none;
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
@@ -152,7 +152,7 @@
   border-radius: 2px;
 }
 .wow-input:focus {
-  border: 1px solid #FFB100;
+  border: 1px solid #ffb100;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .inline-block {
@@ -172,7 +172,7 @@ body {
   background: #2c1f18;
 }
 a {
-  color: #FFB100;
+  color: #ffb100;
 }
 a:hover {
   color: white;
@@ -182,57 +182,49 @@ h2,
 h3,
 h4,
 h5 {
-  color: #FFB100;
+  color: #ffb100;
   font-family: 'Bitter', serif;
 }
 .container-flex {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   height: 100%;
 }
 .container-flex form {
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
   border-radius: 5px;
-  background: #1B0E07;
+  background: #1b0e07;
   box-shadow: 0 0 5px black;
   max-width: 450px;
 }
 .container-flex form legend {
-  color: #FFB100;
+  color: #ffb100;
   padding: 5px;
   width: 100%;
   background: linear-gradient(0deg, #721500, #440402);
-  border: 1px solid #A01E00;
-  border-top-color: #A01E00;
+  border: 1px solid #a01e00;
+  border-top-color: #a01e00;
   border-radius: 3px 3px 0 0;
 }
 .container-flex form fieldset {
-  border: 1px solid #A01E00;
+  border: 1px solid #a01e00;
   border-top: none;
-  color: #EFC9A0;
+  color: #efc9a0;
   margin: 0;
 }
 .container-flex form fieldset label {
-  color: #EFC9A0;
+  color: #efc9a0;
 }
 .container-flex form fieldset input {
   background: #281812;
   border: 1px solid #392923;
   border-radius: 2px;
-  color: #EFC9A0;
+  color: #efc9a0;
 }
 .container-flex form fieldset input:focus {
-  border: 1px solid #FFB100;
+  border: 1px solid #ffb100;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .container-flex form fieldset label,
@@ -244,10 +236,10 @@ h5 {
 .container-flex form fieldset button,
 .container-flex form fieldset a.button {
   background: linear-gradient(0deg, #721500, #440402);
-  border: 1px solid #A01E00;
-  border-top-color: #A01E00;
+  border: 1px solid #a01e00;
+  border-top-color: #a01e00;
   border-radius: 2px;
-  color: #FFB100;
+  color: #ffb100;
   padding: 5px 10px 5px 10px;
   text-decoration: none;
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
@@ -269,8 +261,8 @@ h5 {
 }
 .container-flex form fieldset .error {
   background: #721500;
-  border: 1px solid #FFB100;
-  color: #FFB100;
+  border: 1px solid #ffb100;
+  color: #ffb100;
   border-radius: 3px;
   padding: 15px;
 }
@@ -280,8 +272,8 @@ h5 {
 .steps section {
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
   border-radius: 5px;
-  background: #1B0E07;
-  border: 1px solid #A01E00;
+  background: #1b0e07;
+  border: 1px solid #a01e00;
   box-shadow: 0 0 5px black;
   max-width: 450px;
   padding-top: 0;
@@ -289,14 +281,14 @@ h5 {
 }
 .steps section h1 {
   margin-top: 0;
-  color: #FFB100;
+  color: #ffb100;
   background: linear-gradient(0deg, #721500, #440402);
   padding: 10px;
   font-weight: normal;
   border: none;
   border-bottom: 1px solid #281812;
   border-radius: 2px 2px 0 0;
-  text-shadow: 0px -1px 0 black;
+  text-shadow: 0px -1px 0 #000000;
 }
 .steps section p {
   margin: 25px;
@@ -307,19 +299,19 @@ h5 {
   border: 1px solid #392923;
   border-radius: 2px;
   padding: 10px;
-  color: #EFC9A0;
+  color: #efc9a0;
 }
 .steps section input:not([type=submit]):not([type=file]):focus {
-  border: 1px solid #FFB100;
+  border: 1px solid #ffb100;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .steps section input[type="submit"],
 .steps section button {
   background: linear-gradient(0deg, #721500, #440402);
-  border: 1px solid #A01E00;
-  border-top-color: #A01E00;
+  border: 1px solid #a01e00;
+  border-top-color: #a01e00;
   border-radius: 2px;
-  color: #FFB100;
+  color: #ffb100;
   padding: 5px 10px 5px 10px;
   text-decoration: none;
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
@@ -346,7 +338,7 @@ h5 {
   position: absolute;
   left: 5px;
   top: 5px;
-  border: 1px solid #FFB100;
+  border: 1px solid #ffb100;
 }
 .steps section input[type="submit"].icon,
 .steps section button.icon {
@@ -354,36 +346,34 @@ h5 {
 }
 .steps section input[type="submit"].icon:hover img,
 .steps section button.icon:hover img {
-  -webkit-filter: brightness(120%);
-          filter: brightness(120%);
+  filter: brightness(120%);
 }
 .steps section input[type="submit"].icon:active img,
 .steps section button.icon:active img {
-  -webkit-filter: brightness(70%);
-          filter: brightness(70%);
+  filter: brightness(70%);
 }
 .steps-indicator {
   display: none;
 }
 .wow-link-color {
-  color: #FFB100;
+  color: #ffb100;
 }
 .drop-box {
   width: 100%;
   height: 50px;
-  color: #FFB100;
+  color: #ffb100;
   padding: 20px;
   text-align: center;
 }
 .nav-tabs {
-  border-bottom: 1px solid #A01E00;
+  border-bottom: 1px solid #a01e00;
 }
 .nav-tabs li a {
   background: linear-gradient(0deg, #721500, #440402);
-  border: 1px solid #A01E00;
-  border-top-color: #A01E00;
+  border: 1px solid #a01e00;
+  border-top-color: #a01e00;
   border-radius: 2px;
-  color: #FFB100;
+  color: #ffb100;
   padding: 5px 10px 5px 10px;
   text-decoration: none;
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
@@ -400,10 +390,10 @@ h5 {
 }
 .nav-tabs li a:hover {
   background: linear-gradient(0deg, #721500, #440402);
-  border: 1px solid #A01E00;
-  border-top-color: #A01E00;
+  border: 1px solid #a01e00;
+  border-top-color: #a01e00;
   border-radius: 2px;
-  color: #FFB100;
+  color: #ffb100;
   padding: 5px 10px 5px 10px;
   text-decoration: none;
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
@@ -421,21 +411,21 @@ h5 {
 }
 .nav-tabs li.active a {
   background: linear-gradient(0deg, #610400, #330000);
-  border: 1px solid #A01E00;
-  border-top-color: #A01E00;
+  border: 1px solid #a01e00;
+  border-top-color: #a01e00;
   color: white;
 }
 .nav-tabs li.active a:hover {
   background: linear-gradient(0deg, #610400, #330000);
-  border: 1px solid #A01E00;
-  border-top-color: #A01E00;
+  border: 1px solid #a01e00;
+  border-top-color: #a01e00;
   color: white;
   cursor: default;
 }
 .tab-content {
   width: 100%;
-  background: #1B0E07;
-  border: 1px solid #A01E00;
+  background: #1b0e07;
+  border: 1px solid #a01e00;
   border-top: none;
   padding: 30px 10px;
 }
@@ -447,15 +437,15 @@ h5 {
   border: 1px solid #392923;
   border-radius: 2px;
   width: 100%;
-  color: #FFB100;
+  color: #ffb100;
   padding: 10px;
 }
 .search input:focus {
-  border: 1px solid #FFB100;
+  border: 1px solid #ffb100;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .locale {
-  color: #FFB100;
+  color: #ffb100;
   word-wrap: break-word;
 }
 .locale div {
@@ -467,7 +457,7 @@ h5 {
   border-radius: 2px;
 }
 .locale .editable:focus {
-  border: 1px solid #FFB100;
+  border: 1px solid #ffb100;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .pagination {
@@ -480,17 +470,17 @@ h5 {
   border-color: #281812;
 }
 .pagination li.active a {
-  border-color: #FFB100;
+  border-color: #ffb100;
 }
 .pagination li.active a:hover {
   border-color: white;
 }
 .pagination li a {
   background: linear-gradient(0deg, #721500, #440402);
-  border: 1px solid #A01E00;
-  border-top-color: #A01E00;
+  border: 1px solid #a01e00;
+  border-top-color: #a01e00;
   border-radius: 2px;
-  color: #FFB100;
+  color: #ffb100;
   padding: 5px 10px 5px 10px;
   text-decoration: none;
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
@@ -506,7 +496,7 @@ h5 {
   text-decoration: none;
 }
 .pagination li a:hover {
-  border-color: #FFB100;
+  border-color: #ffb100;
   color: white;
 }
 .spinner {
@@ -556,3 +546,4 @@ h5 {
     -webkit-transform: scale(1);
   }
 }
+/*# sourceMappingURL=totalrp.css.map */

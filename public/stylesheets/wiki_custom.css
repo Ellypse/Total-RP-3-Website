@@ -112,15 +112,10 @@ Custom style used for the wiki
  *
  * Usage : .at2x('path/to/my/image', width, height)
  */
-::-moz-selection {
-  background: #446779;
-  color: white;
-  text-shadow: 0 -1px 0 black;
-}
 ::selection {
   background: #446779;
   color: white;
-  text-shadow: 0 -1px 0 black;
+  text-shadow: 0 -1px 0 #000000;
 }
 body {
   text-rendering: optimizeLegibility;
@@ -129,15 +124,17 @@ body {
   /* for iOS and Safari 6 */
   font-variant-ligatures: common-ligatures;
   /* for up-to-date browsers, including IE10 and Opera 21 */
+  -moz-font-feature-settings: "kern=1";
   /* pre-Firefox 14+ */
   -webkit-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern";
   /* Firefox 14+ */
   font-feature-settings: "kern";
   /* standard */
-  -webkit-font-kerning: normal;
-          font-kerning: normal;
+  font-kerning: normal;
   /* Safari 7+, Firefox 24+, Chrome 33(?)+, Opera 21+*/
   -webkit-font-smoothing: subpixel-antialiased;
+  -moz-font-feature-settings: "liga=1, dlig=1";
   -ms-font-feature-settings: "liga", "dlig";
   -webkit-font-feature-settings: "liga", "dlig";
   -o-font-feature-settings: "liga", "dlig";
@@ -161,8 +158,8 @@ samp {
 .battlenet {
   background-color: black;
   border-radius: 3px;
-  border: 1px solid #0072A8;
-  color: #0072A8 !important;
+  border: 1px solid #0072a8;
+  color: #0072a8 !important;
   padding: 10px;
   margin-top: 10px;
 }
@@ -172,13 +169,12 @@ samp {
   margin-right: 15px;
 }
 .battlenet:hover {
-  background-color: #0072A8;
+  background-color: #0072a8;
   border-color: black;
   color: black !important;
 }
 .battlenet:hover img {
-  -webkit-filter: brightness(0);
-          filter: brightness(0);
+  filter: brightness(0);
 }
 .fyre .fyre-box-wrapper .fyre-logo-drop {
   left: 2px !important;
@@ -190,7 +186,7 @@ samp {
   display: inline-block;
 }
 .battletag {
-  color: #0072A8;
+  color: #0072a8;
 }
 .logo {
   position: relative;
@@ -206,15 +202,14 @@ samp {
   background-image: url("/images/icons/trp3_wiki.png");
   background-size: 100%;
 }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
   .logo::before {
     background-image: url("/images/icons/trp3_wiki@2x.png");
     background-size: 100% auto;
   }
 }
 .logo:hover {
-  -webkit-filter: brightness(150%);
-          filter: brightness(150%);
+  filter: brightness(150%);
 }
 .home-categories .panel .page {
   text-overflow: inherit;
@@ -281,3 +276,4 @@ samp {
     display: none;
   }
 }
+/*# sourceMappingURL=wiki_custom.css.map */

@@ -3,16 +3,9 @@ var express = require('express'),
 	favicon = require('serve-favicon'),
 	logger = require('morgan'),
 	cookieParser = require('cookie-parser'),
-	bodyParser = require('body-parser'),
-	mongoose = require('mongoose'),
-	session = require('express-session'),
-	MongoStore = require('connect-mongo')(session);
+	bodyParser = require('body-parser');
 
-var routesController = require('./controllers/routes-controller'),
-	databaseConfig = require('./config/database'),
-	passport = require('./controllers/authentication-controller');
-
-mongoose.connect(databaseConfig.uri);
+var routesController = require('./controllers/routes-controller');
 
 var app = express();
 
@@ -27,18 +20,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(session({
-	secret: 'prlatot',
-	name: 'totalrp3_session',
-	store: new MongoStore({
-		mongooseConnection: mongoose.connection
-	}),
-	resave: false,
-	saveUninitialized: false
-}));
-
-app.use(passport.initialize());
-app.use(passport.session());
 
 routesController(app);
 
