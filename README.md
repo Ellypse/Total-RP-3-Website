@@ -24,6 +24,6 @@ To run the server while keeping the process active in the terminal (so it's easi
 
 ## TODO
 
-[] Migrate from Jade to something else (React?)
-[] Update the automation stuff (gulp, npm scripts)
+- [ ] Migrate from Jade to something else (React?)
+- [ ] Update the automation stuff (gulp, npm scripts)
 
