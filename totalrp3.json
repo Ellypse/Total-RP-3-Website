@@ -1,0 +1,5 @@
+{
+    "uid": "totalrp3",
+    "append": false,
+    "script": "server.js"
+}
