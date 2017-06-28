@@ -13,7 +13,7 @@ var express = require('express'),
 		.use(require('markdown-it-footnote'))
 		.use(require('markdown-it-anchor'));
 
-var raneto = require('../controllers/raneto-custom/index'),
+var raneto = require('raneto-core'),
 	config = require("../config/raneto");
 
 router.get('/*', function (req, res, next) {

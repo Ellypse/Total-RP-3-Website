@@ -17,3 +17,6 @@ bower_components
 
 # Content uploaded via FTP
 uploads
+
+# Content synced on the server via Dropbox
+content
