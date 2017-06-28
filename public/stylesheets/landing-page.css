@@ -4,36 +4,40 @@
  ************************/
 @font-face {
   font-family: 'Goudy Medieval';
-  src: url('/fonts/goudy_mediaeval_regular.eot');
-  src: url('/fonts/goudy_mediaeval_regular.eot?#iefix') format('embedded-opentype'), url('/fonts/goudy_mediaeval_regular.woff2') format('woff2'), url('/fonts/goudy_mediaeval_regular.woff') format('woff'), url('/fonts/goudy_mediaeval_regular.ttf') format('truetype'), url('/fonts/goudy_mediaeval_regular.svg#goudy_mediaevalregular') format('svg');
+  src: url("/fonts/goudy_mediaeval_regular.eot");
+  src: url("/fonts/goudy_mediaeval_regular.eot?#iefix") format("embedded-opentype"), url("/fonts/goudy_mediaeval_regular.woff2") format("woff2"), url("/fonts/goudy_mediaeval_regular.woff") format("woff"), url("/fonts/goudy_mediaeval_regular.ttf") format("truetype"), url("/fonts/goudy_mediaeval_regular.svg#goudy_mediaevalregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Goudy Medieval';
-  src: url('/fonts/goudy_mediaeval_demibold.eot');
-  src: url('/fonts/goudy_mediaeval_demibold.eot?#iefix') format('embedded-opentype'), url('/fonts/goudy_mediaeval_demibold.woff2') format('woff2'), url('/fonts/goudy_mediaeval_demibold.woff') format('woff'), url('/fonts/goudy_mediaeval_demibold.ttf') format('truetype'), url('/fonts/goudy_mediaeval_demibold.svg#goudy_mediaevalbold') format('svg');
+  src: url("/fonts/goudy_mediaeval_demibold.eot");
+  src: url("/fonts/goudy_mediaeval_demibold.eot?#iefix") format("embedded-opentype"), url("/fonts/goudy_mediaeval_demibold.woff2") format("woff2"), url("/fonts/goudy_mediaeval_demibold.woff") format("woff"), url("/fonts/goudy_mediaeval_demibold.ttf") format("truetype"), url("/fonts/goudy_mediaeval_demibold.svg#goudy_mediaevalbold") format("svg");
   font-weight: bold;
   font-style: normal;
 }
+
 /************************
  * Bitter font (Serif font)
  * http://www.fontsquirrel.com/fonts/bitter
  ************************/
 @font-face {
   font-family: 'Bitter';
-  src: url('/fonts/bitter-regular.eot');
-  src: url('/fonts/bitter-regular.eot?#iefix') format('embedded-opentype'), url('/fonts/bitter-regular.woff2') format('woff2'), url('/fonts/bitter-regular.woff') format('woff'), url('/fonts/bitter-regular.ttf') format('truetype'), url('/fonts/bitter-regular.svg#bitterregular') format('svg');
+  src: url("/fonts/bitter-regular.eot");
+  src: url("/fonts/bitter-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/bitter-regular.woff2") format("woff2"), url("/fonts/bitter-regular.woff") format("woff"), url("/fonts/bitter-regular.ttf") format("truetype"), url("/fonts/bitter-regular.svg#bitterregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Bitter';
-  src: url('/fonts/bitter-bold.eot');
-  src: url('/fonts/bitter-bold.eot?#iefix') format('embedded-opentype'), url('/fonts/bitter-bold.woff2') format('woff2'), url('/fonts/bitter-bold.woff') format('woff'), url('/fonts/bitter-bold.ttf') format('truetype'), url('/fonts/bitter-bold.svg#bitterbold') format('svg');
+  src: url("/fonts/bitter-bold.eot");
+  src: url("/fonts/bitter-bold.eot?#iefix") format("embedded-opentype"), url("/fonts/bitter-bold.woff2") format("woff2"), url("/fonts/bitter-bold.woff") format("woff"), url("/fonts/bitter-bold.ttf") format("truetype"), url("/fonts/bitter-bold.svg#bitterbold") format("svg");
   font-weight: bold;
   font-style: normal;
 }
+
 /************************
  * Fira Sans font (Sans serif font, with ligatures, kerning and other advanced typography features)
  * http://www.fontsquirrel.com/fonts/fira-sans
@@ -43,75 +47,76 @@
  ************************/
 @font-face {
   font-family: 'Fira Sans';
-  src: url('/fonts/firasans-regular.eot');
-  src: url('/fonts/firasans-regular.eot?#iefix') format('embedded-opentype'), url('/fonts/firasans-regular.woff2') format('woff2'), url('/fonts/firasans-regular.woff') format('woff'), url('/fonts/firasans-regular.ttf') format('truetype'), url('/fonts/firasans-regular.svg#fira_sansregular') format('svg');
+  src: url("/fonts/firasans-regular.eot");
+  src: url("/fonts/firasans-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/firasans-regular.woff2") format("woff2"), url("/fonts/firasans-regular.woff") format("woff"), url("/fonts/firasans-regular.ttf") format("truetype"), url("/fonts/firasans-regular.svg#fira_sansregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Fira Sans';
-  src: url('/fonts/firasans-bold.eot');
-  src: url('/fonts/firasans-bold.eot?#iefix') format('embedded-opentype'), url('/fonts/firasans-bold.woff2') format('woff2'), url('/fonts/firasans-bold.woff') format('woff'), url('/fonts/firasans-bold.ttf') format('truetype'), url('/fonts/firasans-bold.svg#fira_sansbold') format('svg');
+  src: url("/fonts/firasans-bold.eot");
+  src: url("/fonts/firasans-bold.eot?#iefix") format("embedded-opentype"), url("/fonts/firasans-bold.woff2") format("woff2"), url("/fonts/firasans-bold.woff") format("woff"), url("/fonts/firasans-bold.ttf") format("truetype"), url("/fonts/firasans-bold.svg#fira_sansbold") format("svg");
   font-weight: bold;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Fira Sans';
-  src: url('/fonts/firasans-italic.eot');
-  src: url('/fonts/firasans-italic.eot?#iefix') format('embedded-opentype'), url('/fonts/firasans-italic.woff2') format('woff2'), url('/fonts/firasans-italic.woff') format('woff'), url('/fonts/firasans-italic.ttf') format('truetype'), url('/fonts/firasans-italic.svg#fira_sansitalic') format('svg');
+  src: url("/fonts/firasans-italic.eot");
+  src: url("/fonts/firasans-italic.eot?#iefix") format("embedded-opentype"), url("/fonts/firasans-italic.woff2") format("woff2"), url("/fonts/firasans-italic.woff") format("woff"), url("/fonts/firasans-italic.ttf") format("truetype"), url("/fonts/firasans-italic.svg#fira_sansitalic") format("svg");
   font-weight: normal;
   font-style: italic;
 }
+
 @font-face {
   font-family: 'Fira Sans';
-  src: url('/fonts/firasans-bolditalic.eot');
-  src: url('/fonts/firasans-bolditalic.eot?#iefix') format('embedded-opentype'), url('/fonts/firasans-bolditalic.woff2') format('woff2'), url('/fonts/firasans-bolditalic.woff') format('woff'), url('/fonts/firasans-bolditalic.ttf') format('truetype'), url('/fonts/firasans-bolditalic.svg#fira_sansbold_italic') format('svg');
+  src: url("/fonts/firasans-bolditalic.eot");
+  src: url("/fonts/firasans-bolditalic.eot?#iefix") format("embedded-opentype"), url("/fonts/firasans-bolditalic.woff2") format("woff2"), url("/fonts/firasans-bolditalic.woff") format("woff"), url("/fonts/firasans-bolditalic.ttf") format("truetype"), url("/fonts/firasans-bolditalic.svg#fira_sansbold_italic") format("svg");
   font-weight: bold;
   font-style: italic;
 }
+
 /************************
  * Fira Mono font (Monospace version of Fira, used in code snippets)
  * http://www.fontsquirrel.com/fonts/fira-mono
  ************************/
 @font-face {
   font-family: 'Fira Mono';
-  src: url('/fonts/firamono-regular.eot');
-  src: url('/fonts/firamono-regular.eot?#iefix') format('embedded-opentype'), url('/fonts/firamono-regular.woff2') format('woff2'), url('/fonts/firamono-regular.woff') format('woff'), url('/fonts/firamono-regular.ttf') format('truetype'), url('/fonts/firamono-regular.svg#fira_monoregular') format('svg');
+  src: url("/fonts/firamono-regular.eot");
+  src: url("/fonts/firamono-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/firamono-regular.woff2") format("woff2"), url("/fonts/firamono-regular.woff") format("woff"), url("/fonts/firamono-regular.ttf") format("truetype"), url("/fonts/firamono-regular.svg#fira_monoregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Fira Mono';
-  src: url('/fonts/firamono-bold.eot');
-  src: url('/fonts/firamono-bold.eot?#iefix') format('embedded-opentype'), url('/fonts/firamono-bold.woff2') format('woff2'), url('/fonts/firamono-bold.woff') format('woff'), url('/fonts/firamono-bold.ttf') format('truetype'), url('/fonts/firamono-bold.svg#fira_monobold') format('svg');
+  src: url("/fonts/firamono-bold.eot");
+  src: url("/fonts/firamono-bold.eot?#iefix") format("embedded-opentype"), url("/fonts/firamono-bold.woff2") format("woff2"), url("/fonts/firamono-bold.woff") format("woff"), url("/fonts/firamono-bold.ttf") format("truetype"), url("/fonts/firamono-bold.svg#fira_monobold") format("svg");
   font-weight: bold;
   font-style: normal;
 }
+
 .wow-medieval {
   font-family: 'Goudy Medieval regular', 'Lora', serif;
 }
-.wow-serif {
+
+.wow-serif, body .buttons .button a {
   font-family: 'Bitter', serif;
 }
-.wow-sans-serif {
+
+.wow-sans-serif, * {
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
 }
+
 .wow-code {
   font-family: "Fira Mono", Consolas, Menlo, Monaco, monospace;
 }
+
 * {
   -webkit-font-smoothing: antialiased;
 }
-/**
- * Retina.less
- *
- * A helper mixin for applying high-resolution background images (http://www.retinajs.com)
- *
- * Usage : .at2x('path/to/my/image', width, height)
- */
-* {
-  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
-}
+
 body {
   background: no-repeat fixed center;
   background-size: cover;
@@ -121,6 +126,7 @@ body {
   right: 0;
   z-index: 0;
 }
+
 body .title {
   width: 512px;
   max-width: 100%;
@@ -128,31 +134,37 @@ body .title {
   margin: 0 auto 20px auto;
   z-index: 1;
   position: relative;
-  background-image: url('/images/logo.png');
+  background-image: url("/images/logo.png");
   background-size: 100%;
   background-repeat: no-repeat;
 }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+
+@media (min--moz-device-pixel-ratio: 1.3), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   body .title {
     background-image: url("/images/logo@2x.png");
     background-size: 100% auto;
   }
 }
+
 body .buttons {
   width: 300px;
   margin: 0 auto 80px auto;
   z-index: 1;
   position: relative;
 }
+
 body .buttons .button {
   width: 298px;
   height: 60px;
   padding-top: 20px;
   position: relative;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-bottom: 40px;
+  -webkit-transition: all .1s linear;
   transition: all .1s linear;
 }
+
 body .buttons .button::before {
   content: " ";
   position: absolute;
@@ -163,12 +175,14 @@ body .buttons .button::before {
   z-index: -1;
   background-image: url("/images/achievement_button.png");
 }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+
+@media (min--moz-device-pixel-ratio: 1.3), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   body .buttons .button::before {
     background-image: url("/images/achievement_button@2x.png");
     background-size: 100% auto;
   }
 }
+
 body .buttons .button a {
   position: absolute;
   width: 100%;
@@ -178,17 +192,19 @@ body .buttons .button a {
   line-height: 52px;
   font-size: 10pt;
   font-weight: bold;
-  font-family: 'Bitter', serif;
   text-decoration: none;
   text-align: center;
-  color: #ffd51b;
+  color: #FFD51B;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
   cursor: pointer;
+  -webkit-transition: all .1s linear;
   transition: all .1s linear;
 }
+
 body .buttons .button a.twitter {
-  color: #55acee;
+  color: #55ACEE;
 }
+
 body .buttons .button a .icon {
   position: absolute;
   left: 5px;
@@ -197,8 +213,10 @@ body .buttons .button a .icon {
   height: 45px;
   border-radius: 4px;
   background-size: 100%;
+  -webkit-transition: all .1s linear;
   transition: all .1s linear;
 }
+
 body .buttons .button a .icon::after {
   content: "";
   background-image: url("/images/icons/border.png");
@@ -209,82 +227,101 @@ body .buttons .button a .icon::after {
   position: absolute;
   background-size: 100%;
 }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+
+@media (min--moz-device-pixel-ratio: 1.3), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   body .buttons .button a .icon::after {
     background-image: url("/images/icons/border@2x.png");
     background-size: 100% auto;
   }
 }
+
 body .buttons .button a .icon.crate {
   background-image: url("/images/icons/crate.png");
 }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+
+@media (min--moz-device-pixel-ratio: 1.3), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   body .buttons .button a .icon.crate {
     background-image: url("/images/icons/crate@2x.png");
     background-size: 100% auto;
   }
 }
+
 body .buttons .button a .icon.wiki {
   background-image: url("/images/icons/trp3_wiki.png");
 }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+
+@media (min--moz-device-pixel-ratio: 1.3), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   body .buttons .button a .icon.wiki {
     background-image: url("/images/icons/trp3_wiki@2x.png");
     background-size: 100% auto;
   }
 }
+
 body .buttons .button a .icon.forum {
   background-image: url("/images/icons/people.png");
 }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+
+@media (min--moz-device-pixel-ratio: 1.3), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   body .buttons .button a .icon.forum {
     background-image: url("/images/icons/people@2x.png");
     background-size: 100% auto;
   }
 }
+
 body .buttons .button a .icon.localization {
   background-image: url("/images/icons/friends.png");
 }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+
+@media (min--moz-device-pixel-ratio: 1.3), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   body .buttons .button a .icon.localization {
     background-image: url("/images/icons/friends@2x.png");
     background-size: 100% auto;
   }
 }
+
 body .buttons .button a .icon.discord {
   background-image: url("/images/icons/discord.png");
 }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+
+@media (min--moz-device-pixel-ratio: 1.3), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   body .buttons .button a .icon.discord {
     background-image: url("/images/icons/discord@2x.png");
     background-size: 100% auto;
   }
 }
+
 body .buttons .button a .icon.ellypse {
   background-image: url("//twitter.com/EllypseCelwe/profile_image?size=normal");
   background-size: 100%;
 }
+
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   body .buttons .button a .icon.ellypse {
     background-image: url("//twitter.com/EllypseCelwe/profile_image?size=bigger");
   }
 }
+
 body .buttons .button a .icon.telko {
   background-image: url("//twitter.com/Telkostrasz/profile_image?size=normal");
   background-size: 100%;
 }
+
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   body .buttons .button a .icon.telko {
     background-image: url("//twitter.com/Telkostrasz/profile_image?size=bigger");
   }
 }
+
 body .buttons .button:hover {
+  -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.9));
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.9));
 }
+
 body .buttons .button:hover a {
   color: white;
 }
+
 body .buttons .button:hover a .icon {
+  -webkit-filter: brightness(150%);
   filter: brightness(150%);
 }
-/*# sourceMappingURL=landing-page.css.map */

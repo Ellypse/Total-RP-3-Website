@@ -4,11 +4,11 @@ Custom style used for the wiki
 @import "fonts";
 @import "retina";
 
-@bnet-color: #0072A8;
-@selection-background-color: #446779;
+$bnet-color: #0072A8;
+$selection-background-color: #446779;
 
 ::selection {
-	background: @selection-background-color;
+	background: $selection-background-color;
 	color: white;
 	text-shadow: 0 -1px 0 black;
 }
@@ -34,7 +34,7 @@ body {
 }
 
 code, kbd, pre, samp {
-	.wow-code;
+	@extend .wow-code;
 }
 
 .content {
@@ -51,8 +51,8 @@ code, kbd, pre, samp {
 .battlenet {
 	background-color: black;
 	border-radius: 3px;
-	border: 1px solid @bnet-color;
-	color: @bnet-color !important;
+	border: 1px solid $bnet-color;
+	color: $bnet-color !important;
 	padding: 10px;
 	margin-top: 10px;
 
@@ -63,7 +63,7 @@ code, kbd, pre, samp {
 	}
 
 	&:hover {
-		background-color: @bnet-color;
+		background-color: $bnet-color;
 		border-color: black;
 		color: black !important;
 		img {
@@ -86,7 +86,7 @@ code, kbd, pre, samp {
 }
 
 .battletag {
-	color: @bnet-color;
+	color: $bnet-color;
 }
 
 .logo {
@@ -100,7 +100,7 @@ code, kbd, pre, samp {
 		position: absolute;
 		left: 0;
 		top: 0;
-		.at2x("/images/icons/trp3_wiki.png", 100%);
+		@include retina-image("/images/icons/trp3_wiki", "png", 100%);
 		background-size: 100%;
 	}
 

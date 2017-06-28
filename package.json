@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./server.js > /dev/null 2> ./errors.log &",
-    "debug": "node ./server.js"
+    "debug": "node ./server.js",
+    "watch": "./node_modules/.bin/gulp sass:watch"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -15,6 +16,8 @@
     "express": "~4.13.1",
     "express-session": "^1.11.3",
     "glob": "^4.0.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0",
     "jade": "~1.11.0",
     "jstransformer-marked": "^1.0.1",
     "less-middleware": "1.0.x",
