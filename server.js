@@ -7,6 +7,7 @@
 var app = require('./app');
 var debug = require('debug')('new_website:server');
 var http = require('http');
+var https = require('https');
 var fs = require('fs');
 
 /**
@@ -14,12 +15,25 @@ var fs = require('fs');
  */
 
 var port = normalizePort(process.env.PORT || '3005');
+var securedPort = normalizePort(process.env.PORT || '3006');
 app.set('port', port);
+
+
+/**
+ * SSL options (certificate and private key)
+ * @type {{key, cert}}
+ */
+var options = {
+	key: fs.readFileSync('/etc/letsencrypt/live/totalrp3.info/privkey.pem'),
+	cert: fs.readFileSync('/etc/letsencrypt/live/totalrp3.info/cert.pem')
+};
 
 /**
  * Create HTTP server.
  */
+
 var server = http.createServer(app);
+var securedServer = https.createServer(options, app);
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -28,6 +42,9 @@ var server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
+securedServer.listen(securedPort);
+securedServer.on('error', onError);
+securedServer.on('listening', onListening);
 
 /**
  * Normalize a port into a number, string, or false.
