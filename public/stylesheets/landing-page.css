@@ -191,10 +191,10 @@ body .buttons .button a.twitter {
 }
 body .buttons .button a .icon {
   position: absolute;
-  left: 11px;
-  top: 8px;
-  width: 41px;
-  height: 41px;
+  left: 5px;
+  top: 4px;
+  width: 45px;
+  height: 45px;
   border-radius: 4px;
   background-size: 100%;
   transition: all .1s linear;
@@ -202,10 +202,10 @@ body .buttons .button a .icon {
 body .buttons .button a .icon::after {
   content: "";
   background-image: url("/images/icons/border.png");
-  top: -2px;
-  bottom: -2px;
-  left: -2px;
-  right: -2px;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
   position: absolute;
   background-size: 100%;
 }
